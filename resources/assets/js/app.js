@@ -5,6 +5,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+// Dont kill this line when if you will 
+// destroy Bootstrap it is linking the 
+// bootstrap.js file 
+//in /assets
 require('./bootstrap');
 
 window.Vue = require('vue');
