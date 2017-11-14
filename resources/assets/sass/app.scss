@@ -1,0 +1,19 @@
+/* ==================================
+	If i dont want to use BOOTSTRAP 
+	take BOOTSTRAP away and use my own 
+	custom CSS here. 
+	(He said in the app.css tehe comprimized file?)
+	If we want to compile it make a NPM install
+================================== */
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+//Custom custom_scss
+@import "custom";
+
+//Normalize
+@import "normalize";
