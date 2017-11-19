@@ -27,4 +27,22 @@
 		    {!!Form::close()!!}
 	    @endif
     @endif
+
+    {{-- SHOW COMMENTS FORM --}}
+	
+    			<form method="POST" action="/comment/{{$post->id}}/comments">
+
+    				{{ csrf_field() }}
+    				
+		    		<div class="form-group">
+					{{Form::textarea('comment','', ['class' => 'form-control', 'placeholder' => 'Comments here'])}}
+				</div>
+
+    				<div class="form-group">
+					{{Form::submit('Submit', ['class' => 'btn btn-primary', ])}}
+					{!! Form::close() !!}
+				</div>{{-- END form-group --}}		
+
+
+ 	
 @endsection

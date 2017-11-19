@@ -1,5 +1,6 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
+// npm rebuild node-sass --force
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management

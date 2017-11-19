@@ -978,6 +978,10 @@ module.exports = __webpack_require__(42);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+// Dont kill this line when if you will 
+// destroy Bootstrap it is linking the 
+// bootstrap.js file 
+//in /assets
 __webpack_require__(11);
 
 window.Vue = __webpack_require__(35);

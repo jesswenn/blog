@@ -1,10 +1,10 @@
-/* ==================================
+/* ================================================================
 	If i dont want to use BOOTSTRAP 
 	take BOOTSTRAP away and use my own 
 	custom CSS here. 
 	(He said in the app.css tehe comprimized file?)
 	If we want to compile it make a NPM install
-================================== */
+================================================================= */
 
 // Variables
 @import "variables";
@@ -17,3 +17,10 @@
 
 //Normalize
 @import "normalize";
+
+/* ================================================================
+	Allt du vill skriva över i ett framework exempelvis Bootstrap
+	Skall du göra ditt custom css nedanför bootstrap under 
+================================================================= */
+
+// My custom SASS pages

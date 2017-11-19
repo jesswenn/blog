@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-/* ==================================
+/* ================================================================
 	If i dont want to use BOOTSTRAP 
 	take BOOTSTRAP away and use my own 
 	custom CSS here. 
 	(He said in the app.css tehe comprimized file?)
 	If we want to compile it make a NPM install
-================================== */
+================================================================= */
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -8379,6 +8379,7 @@ button.close {
 }
 
 body {
+  background-color: pink;
   font-family: "Scope One", serif;
 }
 
@@ -8883,4 +8884,9 @@ template {
 [hidden] {
   display: none;
 }
+
+/* ================================================================
+	Allt du vill skriva över i ett framework exempelvis Bootstrap
+	Skall du göra ditt custom css nedanför bootstrap under 
+================================================================= */
 

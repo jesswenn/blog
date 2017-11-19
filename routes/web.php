@@ -28,15 +28,16 @@ Route::get('/about', 'PagesController@about');
 // Create all routes for all functions we need
 // And Linking to ALL our posts on the page
 Route::resource('posts', 'PostsController');
-Auth::routes();
+
 // Auth::routes();
+Auth::routes();
+
 
 Route::get('/dashboard', 'DashboardController@index');
 
 //Comments controller
 // Route::post('/posts/{post}/comments', 'CommentsController@store');
+Route::post('/comment', 'CommentsController@store');
 
-// AUTH will register endpoints such as for 
-// registration, login, password, resets and things like that
 
 

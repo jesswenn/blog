@@ -16,3 +16,30 @@ CKEDITOR
 		Att kunna göra på Appen:
 
 	* Att endast se post när du är innloggad?
+
+
+
+	
+
+//=============================================
+
+// npm rebuild node-sass --force
+
+
+//Refreshes the DB
+php artisan migrate:refresh
+
+
+//Start a new laravel project
+Update PATH variable
+Keyword in terminal: laravel
+Create new project: laravel new (name priject()
+
+To make it public in the public 
+folder make some dependencies:
+RUN: composer update --no scripts
+
+
+
+//Installing a NEW project from composer
+composer create-project --prefer-dist laravel/laravel YOUR PROJECT_NAME
