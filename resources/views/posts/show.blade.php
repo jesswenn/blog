@@ -29,7 +29,30 @@
     @endif
 
     {{-- SHOW COMMENTS FORM --}}
-	
+
+    <div class="card">
+	    	<div class="card-block">
+	    		<form method="POST" acrion="/posts{{$post->id}}/comments">
+
+	    			{{ csrf_field() }}
+
+	    			{{-- {{ method_field('PATCH')}} --}}
+
+	    		<div class="form-group">
+	    			<textarea name="body" placeholder="Comment here" cols="30" rows="10" class="form-control"></textarea>	    			
+	    		</div>
+
+		    		<div action="form-group">
+		    			<button type="submit" class="btn m-b-75">Add Comment</button>	
+		    		</div>
+
+	    		</form>
+	    	</div>{{-- END card-block --}}
+    </div>{{-- END card --}}
+@endsection
+
+
+	{{-- btn btn-primary
     			<form method="POST" action="/comment/{{$post->id}}/comments">
 
     				{{ csrf_field() }}
@@ -41,8 +64,7 @@
     				<div class="form-group">
 					{{Form::submit('Submit', ['class' => 'btn btn-primary', ])}}
 					{!! Form::close() !!}
-				</div>{{-- END form-group --}}		
+				</div>	 --}}
 
 
  	
-@endsection

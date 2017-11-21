@@ -1,0 +1,81 @@
+/* ===========================================================
+	MAke your own custom style 
+	here.
+	When run in terminal:
+	
+	RUN: 
+	npm run watch 
+	// Constant make it watch for errors and compile the css in publiv
+	
+	STOP: 
+	ctrl + c
+	and type: CLEAR
+	
+=========================================================== */
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	background-color: #333;	font-family: $font-family-sans-serif;
+}
+
+.jumbotron {
+    background-color: transparent; 
+    
+}
+.front-image{
+	 /* Full height */
+	width: 100%;
+	height:100%;
+	height:calc(100% - 1px);
+	padding-left: 0 auto;
+	padding-right: 0 auto;
+	margin: 0;
+
+    /* Center and scale the image nicely */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+p{
+	font-size: 2rem;
+	margin-top: 10px;
+}
+
+.author-written{
+	font-size: 1.5rem;
+
+}
+
+/* ============================================
+	
+	BTN – element
+	MAke the Create and Delete btn to work
+
+/* ============================================ */
+
+.btn {
+	background-color: transparent;
+	border-color: #19d8a7;
+	color: #19d8a7;
+	padding: 15px 40px;
+  	border-radius: 4px;
+  	font-family: $font-family-sans-serif;
+	text-transform: uppercase;
+  	transition: all 0.2s ease-in-out;
+	
+	/* NOT write important to override the bootstrap 
+		How do i overwrite the bootstrap easy 
+		What to think about */
+	&:hover { 
+		background-color: #000;
+    		border-color: #000;
+    		color: #19d8a7;
+	}
+}
+
+

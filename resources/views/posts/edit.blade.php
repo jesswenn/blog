@@ -16,7 +16,7 @@
 		</div>
 
 		{{-- Here we upload image --}}
-		<div class="form-group">
+		<div class="form-group-choose-file">
 			{{Form::file('cover_image')}}
 		</div>
 

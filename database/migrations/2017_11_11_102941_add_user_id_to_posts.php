@@ -27,7 +27,6 @@ class AddUserIdToPosts extends Migration
     {
             // If we want to delete the column user_id do a
             
-
             // Thats way we set the shema in the 
             // function down wen we made it so we can easily rollback in terminal 
             // width the comand:

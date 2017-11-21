@@ -35,9 +35,9 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 
+
 //Comments controller
-// Route::post('/posts/{post}/comments', 'CommentsController@store');
-Route::post('/comment', 'CommentsController@store');
+Route::post('/posts/{post}/comments', 'CommentsController@store');
 
 
 

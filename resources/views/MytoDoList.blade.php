@@ -43,3 +43,14 @@ RUN: composer update --no scripts
 
 //Installing a NEW project from composer
 composer create-project --prefer-dist laravel/laravel YOUR PROJECT_NAME
+
+
+
+
+//// SETUPS LARAVEL:
+
+Engine X 
+VAlet allows you to visit a project in browser without configuration,
+
+Mysquel setup, connecting via Msquel trow sequelpro.
+Composer install so we can requarie ant project we need.
