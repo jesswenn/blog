@@ -10,61 +10,39 @@
 		<div>
 			<p>{!!$post->body!!}</p>
 		</div>
-	
-    {{-- If the user is not a guest,
-    		 then they will not bee able to see this
-    		 
-    		 If aut user id is ecual to the post user id then its ok to see it
-    		 the user has to match the post user id--}}
-	@if(!Auth::guest())
-		@if(Auth::user()->id == $post->user_id)
-    			<a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a>
-	    
-		    {{-- In the PostController@destroy method we pass the post and the id so it knows with post to delete --}}
-		    {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method'=> 'POST', 'class' => 'pull-right'])!!}
-		        {{Form::hidden('_method', 'DELETE')}}
-		        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-		    {!!Form::close()!!}
-	    @endif
-    @endif
+	<hr>
+    	<div class="comments">
+	    	<ul class="list-group">
+	    		@foreach($post->comments as $comment)
+		    		<li class="list-group-item">
+		    			<strong>
+		    				{{ $comment->created_at->diffForHumans() }}:&nbsp;
+		    			</strong>
+		    			{{ $comment->body }}
+		    		</li>
+		    	@endforeach		
+	    	</ul>
+	</div> {{-- END comments --}}
+    	{{-- Show comments form, a user can add comments on everyones post, 
+	    		and when not logged in you cant see the comments in the blog--}}
+		<div action="card">
+			<div class="card-block">	
+				<form method="POST" action="/posts/{{$post->id}}/comments">
+					{{ csrf_field() }}
+					<div class="form-group">
+						<textarea name="body" placeholder="Your comment here" class="form-control"></textarea>
+					</div>
 
-    {{-- SHOW COMMENTS FORM --}}
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">Add comment</button>
+					</div>
+				</form>
+			
+			</div>{{-- END card-block --}}
+		</div>{{-- END card --}} 	
+	    	
+    
+</div>
 
-    <div class="card">
-	    	<div class="card-block">
-	    		<form method="POST" acrion="/posts{{$post->id}}/comments">
-
-	    			{{ csrf_field() }}
-
-	    			{{-- {{ method_field('PATCH')}} --}}
-
-	    		<div class="form-group">
-	    			<textarea name="body" placeholder="Comment here" cols="30" rows="10" class="form-control"></textarea>	    			
-	    		</div>
-
-		    		<div action="form-group">
-		    			<button type="submit" class="btn m-b-75">Add Comment</button>	
-		    		</div>
-
-	    		</form>
-	    	</div>{{-- END card-block --}}
-    </div>{{-- END card --}}
 @endsection
 
-
-	{{-- btn btn-primary
-    			<form method="POST" action="/comment/{{$post->id}}/comments">
-
-    				{{ csrf_field() }}
-    				
-		    		<div class="form-group">
-					{{Form::textarea('comment','', ['class' => 'form-control', 'placeholder' => 'Comments here'])}}
-				</div>
-
-    				<div class="form-group">
-					{{Form::submit('Submit', ['class' => 'btn btn-primary', ])}}
-					{!! Form::close() !!}
-				</div>	 --}}
-
-
- 	

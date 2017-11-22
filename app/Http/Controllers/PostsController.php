@@ -70,7 +70,7 @@ class PostsController extends Controller
 
         ]);
 
-        //HAndle file uppload
+        // HAndle file uppload
         // If request clickchoose file
         // if they didnt use the default image
         if ($request->hasFile('cover_image')) {
