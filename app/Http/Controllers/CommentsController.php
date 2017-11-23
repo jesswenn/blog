@@ -14,6 +14,7 @@ class CommentsController extends Controller
     // comments dosent show in show.blade.php ?????
     public function store(Post $post)
         {
+            // Required is how many signs when typing title comment?
             $this->validate(request(), ['body' => 'required|min:2']);
 
             $user_id = auth()->user()->id;

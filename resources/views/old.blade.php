@@ -1,3 +1,12 @@
+{{-- ==============================================================
+
+
+	HERE IS OLD CODE SO I CAN LOOK AT 
+
+
+=============================================================== --}}
+
+{{-- THE COMMENTS show.blade.php file --}}
 @extends('layouts.app')
 
 @section('content')
