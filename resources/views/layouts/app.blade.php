@@ -45,7 +45,11 @@
     {{-- TO DO! Fixa så CKEDITOR synkas STÄMMER MED 
         textarea som tydligen måste finnas (se slack) --}}
 
+    {{-- CDN To ckeditor --}}
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script> --}}
+
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script src="/assets/js/ckeditor.js"></script>
      {{-- <script src="//cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script‌​>  --}}
     <script>
         CKEDITOR.replace( 'article-ckeditor' );

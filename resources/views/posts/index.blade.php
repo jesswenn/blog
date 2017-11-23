@@ -24,8 +24,6 @@
 				</div>
 			@endforeach
 
-
-
 			{{-- HERE WE PAGINATES THE PAGES --}}
 			{{ $posts->links() }}
 		@else

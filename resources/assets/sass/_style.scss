@@ -17,8 +17,7 @@
 	margin: 0px;
 }
 
-body{
-	background-color: #C4FFF9;
+body {
 	font-family: $font-family-sans-serif;
 }
 
@@ -26,6 +25,7 @@ body{
     background-color: transparent; 
     
 }
+
 .front-image{
 	 /* Full height */
 	width: 100%;
@@ -39,17 +39,14 @@ body{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-
-
 }
-p{
+p {
 	font-size: 2rem;
 	margin-top: 10px;
 }
 
 .author-written{
 	font-size: 1.5rem;
-
 }
 
 /* ============================================
@@ -73,10 +70,12 @@ p{
 		How do i overwrite the bootstrap easy 
 		What to think about */
 	&:hover { 
-		background-color: #000;
-    		border-color: #000;
-    		color: #19d8a7;
+		background-color: #E2CC5F;
+    		border-color: #E2CC5F;
+    		color: #fff;
 	}
+
+	
 }
 
 

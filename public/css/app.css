@@ -10,6 +10,8 @@
 
 /* Variables */
 
+/* Typography */
+
 /* Font-Awesome*/
 
 /* Bootstrap */
@@ -1422,7 +1424,7 @@ body {
   font-size: 14px;
   line-height: 1.6;
   color: #636b6f;
-  background-color: pink;
+  background-color: #E2CC5F;
 }
 
 input,
@@ -1471,7 +1473,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.6;
-  background-color: pink;
+  background-color: #E2CC5F;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -3070,7 +3072,7 @@ th {
 }
 
 .table .table {
-  background-color: pink;
+  background-color: #E2CC5F;
 }
 
 .table-condensed > thead > tr > th,
@@ -5269,7 +5271,7 @@ tbody.collapse.in {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: pink;
+  background-color: #E2CC5F;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -5370,7 +5372,7 @@ tbody.collapse.in {
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: pink;
+    border-bottom-color: #E2CC5F;
   }
 }
 
@@ -5815,7 +5817,7 @@ tbody.collapse.in {
 
 .navbar-default {
   background-color: #fff;
-  border-color: #ff8da1;
+  border-color: #dabe34;
 }
 
 .navbar-default .navbar-brand {
@@ -5871,7 +5873,7 @@ tbody.collapse.in {
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #ff8da1;
+  border-color: #dabe34;
 }
 
 .navbar-default .navbar-nav > .open > a,
@@ -6444,7 +6446,7 @@ a.badge:focus {
   padding: 4px;
   margin-bottom: 22px;
   line-height: 1.6;
-  background-color: pink;
+  background-color: #E2CC5F;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -6726,7 +6728,7 @@ a.thumbnail.active {
   padding: 10px 15px;
   margin-bottom: -1px;
   background-color: #fff;
-  border: 1px solid #ff8da1;
+  border: 1px solid #dabe34;
 }
 
 .list-group-item:first-child {
@@ -7009,7 +7011,7 @@ button.list-group-item-danger.active:focus {
 .panel-footer {
   padding: 10px 15px;
   background-color: #f5f5f5;
-  border-top: 1px solid #ff8da1;
+  border-top: 1px solid #dabe34;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
@@ -7230,7 +7232,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-group .panel-heading + .panel-collapse > .panel-body,
 .panel-group .panel-heading + .panel-collapse > .list-group {
-  border-top: 1px solid #ff8da1;
+  border-top: 1px solid #dabe34;
 }
 
 .panel-group .panel-footer {
@@ -7238,21 +7240,21 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-group .panel-footer + .panel-collapse .panel-body {
-  border-bottom: 1px solid #ff8da1;
+  border-bottom: 1px solid #dabe34;
 }
 
 .panel-default {
-  border-color: #ff8da1;
+  border-color: #dabe34;
 }
 
 .panel-default > .panel-heading {
   color: #333333;
   background-color: #fff;
-  border-color: #ff8da1;
+  border-color: #dabe34;
 }
 
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #ff8da1;
+  border-top-color: #dabe34;
 }
 
 .panel-default > .panel-heading .badge {
@@ -7261,7 +7263,7 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #ff8da1;
+  border-bottom-color: #dabe34;
 }
 
 .panel-primary {
@@ -9415,7 +9417,6 @@ p {
 }
 
 body {
-  background-color: #C4FFF9;
   font-family: "Scope One", serif;
 }
 
@@ -9471,8 +9472,8 @@ p {
 
 .btn:hover,
 .form-group-choose-file:hover {
-  background-color: #000;
-  border-color: #000;
-  color: #19d8a7;
+  background-color: #E2CC5F;
+  border-color: #E2CC5F;
+  color: #fff;
 }
 
