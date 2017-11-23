@@ -10,8 +10,10 @@ use App\Comment;
 class CommentsController extends Controller
 {
 
-    // This metod store in DB but the 
-    // comments dosent show in show.blade.php ?????
+    // TO DO:
+    // This metod store in DB 
+    // You can just make comments on your own post
+    // Not one others post ??
     public function store(Post $post)
         {
             // Required is how many signs when typing title comment?
@@ -22,12 +24,14 @@ class CommentsController extends Controller
             // Add a comments to a post
             $post->addComment(request('body'), $user_id);
 
-            return back();
+            return back ();
             // return response('Hello Comment');  
             // return view($post->body);
         }
 
+        
 
+}
         // Whit this ill get the rout to comments
         //   /comments
         // in the url
@@ -37,7 +41,6 @@ class CommentsController extends Controller
 		
 	// 		return back();
 	// }
-}
 
 
 

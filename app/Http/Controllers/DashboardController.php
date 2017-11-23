@@ -27,9 +27,6 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        // TO DO!
-        // DASHBOARD IS BLANK AND WHEN 
-        // MAKING THIS FUNCTION AN ERROR OCCURS
         
         // Get the logged in users id
         $user_id = auth()->user()->id;

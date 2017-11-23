@@ -11,14 +11,20 @@
 							<img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}" alt="Image">
 						</div>
 						<div class="col-md-8 col-sm-8">
+
 							{{-- Link to every single post when click on it whit the post id --}}
-							
 							<h3><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h3>
-							<small>Written on{{ $post->created_at->toFormattedDateString() }} by {{$post->user->name}}</small>		
+							<dd>{{ date('M j, Y – G:iA' , strtotime($post->created_at)) }}</dd>
+
+
+							{{-- <small>Written on{{ $post->created_at->toFormattedDateString() }} by {{$post->user->name}}</small>		 --}}
+
 						</div>		
 					</div>
 				</div>
 			@endforeach
+
+
 
 			{{-- HERE WE PAGINATES THE PAGES --}}
 			{{ $posts->links() }}

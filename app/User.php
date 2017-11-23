@@ -31,6 +31,7 @@ class User extends Authenticatable
     // With this line we can use searten
     // querys element that wouldnt be availble
     public function posts(){
+        // return $this->hasMany(Post::class);
         return $this->hasMany('App\Post');
     }
 }

@@ -58,9 +58,7 @@ class Post extends Model
         ->get()
         ->toArray();
 
-
     }
-    
     // Table name
 	protected $table = 'posts';
 
@@ -70,20 +68,4 @@ class Post extends Model
 	// Timestamps
 	public $timestamps = true;
 
-	// Add relaton betwenn blogpost and the user
-	// so we see the current users post in dashboard
-	// a single post belongs to a user
-	// public function user(){
-	// 	return $this->belongsTo('App\User');
-	// }
-
-	// public function comments(){
-	// 	return $this->hasMany(Comment::class);
-	// }
-
-	// TO DO CAnt make the comments to work
-     // public function addComment($body)
-     //    {
-     //        $this->comments()->create(compact('body'));
-     //    }
 }

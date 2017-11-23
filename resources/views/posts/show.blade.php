@@ -14,7 +14,7 @@
 
 	@if(!Auth::guest())
 		@if(Auth::user()->id == $post->user_id)
-    			{{-- <a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a> --}}
+    			<a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a>
 	    	<div class="comments">
 		    	<ul class="list-group">
 		    		@foreach($post->comments as $comment)
@@ -46,13 +46,14 @@
 						<button type="submit" class="btn btn-primary">Add comment</button>
 					</div>
 				</form>
-	
+				{{-- @include('inc.messages')
+ --}}					
 		{{-- In the PostController@destroy method we pass the post and the id so it knows with post to delete --}}
-	 {{--    {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method'=> 'POST', 'class' => 'pull-right'])!!}
-	        {{Form::hidden('_method', 'DELETE')}}
-	        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-	    {!!Form::close()!!} --}}
-			
+{{-- 		{!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method'=> 'POST', 'class' => 'pull-right'])!!}
+			{{Form::hidden('_method', 'DELETE')}}
+			{{Form::submit('Delete', ['class' => 'btn btn-danger btn'])}}
+		{!!Form::close()!!}
+ --}}			
 			</div>{{-- END card-block --}}
 		</div>{{-- END card --}} 	
 	    	 
