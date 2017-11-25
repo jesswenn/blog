@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Album – Manage</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
 
 
     <!-- Styles -->
@@ -31,6 +31,7 @@
         {{-- <textarea name="ckeditor" id="ckeditor" cols="30" rows="10"></textarea> --}}
             @include('inc.navbar')
 
+              @include('inc.manage')
             {{-- @include('layouts.sidebar') --}}
             <div class="container">
                 @include('inc.messages')

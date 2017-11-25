@@ -18,7 +18,6 @@
 
 // You dont want to return your vue from the route you make a controller
 
-
 // The function name is 
 // @index that we made in the pages controller
 Route::get('/', 'PagesController@index');
@@ -32,12 +31,18 @@ Route::resource('posts', 'PostsController');
 // Auth::routes();
 Auth::routes();
 
-
 Route::get('/dashboard', 'DashboardController@index');
-
 
 //Comments controller
 Route::post('/posts/{post}/comments', 'CommentsController@store');
+
+
+//CMS Manage backend
+// if surten user has this roles: they can access the CMS our backend
+Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function(){
+	Route::get('/', 'ManageController@index');
+	Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
+});
 
 
 
