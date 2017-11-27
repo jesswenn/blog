@@ -17,7 +17,8 @@
 
 
 		<div class="col-4">
-			<a href="{{route('users.edit', $user->id)}}" class="btn btn-primary"><i class="fa fa-user-plus m-r-10"></i>Edit user</a>
+			<a href="{{route('users.edit', $user->id)}}" class="btn btn-primary">
+				<i class="fa fa-user-plus m-r-10"></i>Edit user</a>
 		</div>
 
 
@@ -33,11 +34,11 @@
 			  </div>
 
 
-			  <div class="form-check">
+{{-- 			  <div class="form-check">
 			    <label class="form-check-label">
 			      <input type="checkbox" name="password" class="form-check-input" id="password" v-if="!auto_password">Auto generate Password
 			    </label>
-			  </div>
+			  </div> --}}
 		
 	</div> {{-- END container --}}
 @endsection

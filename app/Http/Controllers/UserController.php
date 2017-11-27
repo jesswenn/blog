@@ -1,16 +1,12 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Hash;
-
 use App\User;
 use DB;
 use Session;
 // use Hash;
-
 class UserController extends Controller
 {
     /**
@@ -18,16 +14,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
     {
         // $users = User::all();
-
         // TO DO! Make the pagination not so Botstrap fix CSS
         $users = User::orderBy('id', 'desc')->paginate(4);
         return view('manage.users.index')->withUsers($users);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -43,14 +36,12 @@ class UserController extends Controller
         //     'password' => bcrypt($data['password']),
         // ]);
     }
-
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
     public function store(Request $request)
     {
         // The array withe the saved user 
@@ -59,26 +50,18 @@ class UserController extends Controller
         // $name = $request->input('user.name');
          // $name = $request->input('name');
          // $input = $request->all();
-
-
-
-
         //=========================================================================
             
             // When to store the user and password in DB
             // failiur shows
             // with the has Request::password?????????????????????????????
-
         // Because session() isn't a static method. You can use the global request helper though:
        // $validationCode = request()->session()->get('validation_code', '');
-
         //=========================================================================
-
         $this->validate($request, [
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users'
         ]);
-
        //  if (Request::has('password') && !empty($request->password)) {
        //      $password = trim ($request->password);
        //  }else {
@@ -90,31 +73,23 @@ class UserController extends Controller
        //      for ($i = 0; $i < $lenght; ++$i) { 
        //          $str .= $keyspace[random_int(0, $max)];
        //      }
-
        //      $password = $str;
        //  }
-
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = $request->password;
-
         //  THIS HAS::make dosent work?????????????????
         // $user->password =  Hash::make($password);
         $user->save();
-
        if ($user->save()) {
            return redirect()->route('users.show', $user->id);
        }else{
         
         Session::flash('danger', 'Sorrry a problem has occured whille creating a new user');
         return redirect()->route('users.create');
-
        }
     }
-
-
-
     /**
      * Display the specified resource.
      *
@@ -126,7 +101,6 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         return view('manage.users.show')->withUser($user);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -138,7 +112,6 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         return view('manage.users.edit')->withUser($user);
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -152,11 +125,11 @@ class UserController extends Controller
             'password' => Hash::make($request->newPassword)
         ])->save();
     
-
-       //  $this->validate($request, [
-       //       'name' => 'required|max:255',
-       //      'email' => 'required|email|unique:users,email,'.$id
-       //  ]);
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'email' => 'required|email|unique:users,email,'.$id
+        ]);
+        
        //  $user = User::findOrFail($id);
        //  $user->name = $request->name;
        //  $user->email = $request->email;
@@ -171,9 +144,7 @@ class UserController extends Controller
        //      $password = $str;
        //  }elseif ($request->password_options == 'manual') {
        //      $user->password = Has::make($request->password);
-
        //  }
-
        //  if ($user->save()) {
        //     return redirect()->route('user.show', $id);
        // }else{
@@ -181,7 +152,6 @@ class UserController extends Controller
        //  return redirect()->route('users.edit', $id);
        //  }
     }
-
     /**
      * Remove the specified resource from storage.
      *
