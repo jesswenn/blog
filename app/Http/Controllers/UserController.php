@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Hash;
 
 use App\User;
 use DB;
 use Session;
-use Hash;
+// use Hash;
 
 class UserController extends Controller
 {
@@ -17,6 +18,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         // $users = User::all();
@@ -34,6 +36,12 @@ class UserController extends Controller
     public function create()
     {
         return view('manage.users.create');
+        
+        // return User::create([
+        //     'name' => $data['name'],
+        //     'email' => $data['email'],
+        //     'password' => bcrypt($data['password']),
+        // ]);
     }
 
     /**
@@ -140,6 +148,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->user()->fill([
+            'password' => Hash::make($request->newPassword)
+        ])->save();
+    
 
        //  $this->validate($request, [
        //       'name' => 'required|max:255',

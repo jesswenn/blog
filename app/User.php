@@ -39,4 +39,10 @@ class User extends Authenticatable
         // return $this->hasMany(Post::class);
         return $this->hasMany('App\Post');
     }
+
+    // setPasswordAttribute set the encryption in DB
+     public function setPasswordAttribute($password)
+    {   
+        $this->attributes['password'] = bcrypt($password);
+    }
 }

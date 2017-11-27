@@ -23,23 +23,52 @@
 
 			<div class="form-group">
 			    <label for="email">Email</label>
-			    <input type="text" class="form-control" id="email" value="{{$user->email}}">
+			    <input type="text" class="form-control" name="email" id="email" value="{{$user->email}}">
 			  </div>
 
 
-			  <div class="form-group">
+			  {{-- <div class="form-group">
 			    <label for="password">Password</label>
 			    <input type="password" class="form-control" id="password">
-			  </div>
+			  </div> --}}
 
 
-			  <div class="form-check">
-			    <label class="form-check-label">
-			      <input type="text" name="password" class="form-check-input" id="password" v-if="!auto_password">Auto generate Password
-			    </label>
-			  </div>
+	{{-- 	 		<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+	                       <label for="password" class="col-md-4 control-label">Password</label> --}}
 
-			  <button class="btn btn-primary m-t-15">edit user</button>
+					{{-- Radio buttons for checked password dosent work --}}
+	                       <div class="custom-controls-stacked">
+						  <label class="custom-control custom-radio">
+						    <input id="radioStacked3" name="radio-stacked" type="radio" class="custom-control-input">
+						    <span class="custom-control-indicator"></span>
+						    <span class="custom-control-description">Do not change password</span>
+						  </label>
+
+						  <label class="custom-control custom-radio">
+						    <input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input">
+						    <span class="custom-control-indicator"></span>
+						    <span class="custom-control-description">Generate new password</span>
+						  </label>
+
+						    <label class="custom-control custom-radio">
+						    <input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input">
+						    <span class="custom-control-indicator"></span>
+						    <span class="custom-control-description">Manually set new password</span>
+						  </label>
+						</div>
+
+
+	      {{--                  <div class="col-md-6">
+	                           <input id="password" type="password" class="form-control" name="password" v-if="password_options =='manual'" required>
+
+	                           @if ($errors->has('password'))
+	                               <span class="help-block">
+	                                   <strong>{{ $errors->first('password') }}</strong>
+	                               </span>
+	                           @endif
+                       </div> --}}
+
+			  <button class="btn btn-primary m-t-15">Edit user</button>
 			</form>
 	
 	</div>{{-- END container --}}
