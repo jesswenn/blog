@@ -48,9 +48,15 @@
 
                     <ul class="dropdown-menu" role="menu">
                         <li>
+                            {{-- Redirects to Public dashboard fol all user--}}
                             <a href="/dashboard">
                                 <span class="icon"><i class="fa fa-fw m-r-10 fa-user-circle-o"></i></span>
                             Dashboard</a></li>
+                        
+                        {{-- Redirects to Manage dashboard --}}
+                        <a href="{{route('manage.dashboard')}}">
+                                <span class="icon"><i class="fa fa-fw m-r-10 fa-user-circle-o"></i></span>
+                            Manage</a></li>
 
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">

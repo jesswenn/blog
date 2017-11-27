@@ -1,3 +1,8 @@
+{{-- =======================================================
+
+  Here we view render out the main template for manage
+
+==========================================================--}}
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -33,7 +38,7 @@
 
               @include('inc.manage')
             {{-- @include('layouts.sidebar') --}}
-            <div class="container">
+            <div class="managment-area m-l-30" id="app">
                 @include('inc.messages')
 
                 @yield('content')   

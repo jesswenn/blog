@@ -42,7 +42,12 @@ Route::post('/posts/{post}/comments', 'CommentsController@store');
 Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function(){
 	Route::get('/', 'ManageController@index');
 	Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
+
+	//Creates ALL routes that we want for our Manage dashboard CMS
+	Route::resource('/users', 'UserController');
 });
+
+
 
 
 

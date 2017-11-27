@@ -18,7 +18,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-4">
-				<img class="front-image" src={{asset('/upload_image/blue-robot.jpg')}} alt="Image on robot"></a>
+				{{-- <img class="front-image" src={{asset('/upload_image/blue-robot.jpg')}} alt="Image on robot"></a> --}}
 			</div>
 		{{-- 	<div class="col-4">
 				<img class="front-image" src={{asset('/upload_image/blue-robot.jpg')}} alt="Image on robot"></a>
