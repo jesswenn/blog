@@ -22,12 +22,11 @@ class CreateCommentsTable extends Migration
             //A link between the post and comment
             $table->integer('post_id');
             $table->string('body');
+            $table->timestamps();
 
             // Add this line to make the comments work, 
             // but didnt know how to update in terminal
             // $table->tinyInteger('role')->default(1);
-
-            $table->timestamps();
         });
     }
 

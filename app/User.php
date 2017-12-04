@@ -2,7 +2,9 @@
 namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+
 use Laratrust\Traits\LaratrustUserTrait;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -37,4 +39,15 @@ class User extends Authenticatable
     {   
         $this->attributes['password'] = bcrypt($password);
     }
+
+    // Saves the users post that they creates
+    // public function publish(Post $post) 
+    // {
+    //     $this->posts()->save($post);
+        // Post::create([
+        //     'title'=>request('title'),
+        //     'body'=>request('body'),
+        //     'user_id'=>auth()->id()
+        // ]);
+    // }
 }

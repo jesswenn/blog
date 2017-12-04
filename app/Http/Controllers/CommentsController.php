@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Auth;
 use App\Comment;
 use App\Post;
 use Session;
@@ -16,7 +17,7 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        //
+        // 
     }
 
     /**
@@ -40,12 +41,9 @@ class CommentsController extends Controller
     public function store(Request $request, $post_id)
     {
         // Required is how many signs when typing title comment?
-        $this->validate(request(), [
-            'body' => 'required|min:2'
-        ]);
+        $this->validate(request(), ['body' => 'required|min:2']);
 
-        // $user_id = auth()->user()->id;
-        
+        $user_id = auth()->user()->id;
         // Add a comments to a post
         $post->addComment(request('body'), $user_id);
         $post->comments()->save($comment);       
@@ -63,7 +61,7 @@ class CommentsController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

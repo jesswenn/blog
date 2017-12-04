@@ -1,6 +1,7 @@
 <?php
 namespace App;
 use Illuminate\Database\Eloquent\Model;
+
 class Post extends Model
 {
     public function comments()
@@ -10,9 +11,9 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
-    public function addComment($body, $user_id)
+    public function addComment($comment, $user_id)
     {
-        $this->comments()->create(compact(['user_id', 'body']));
+        $this->comments()->create(compact(['user_id', 'comment']));
     }
         //A QUERY SCOPE for the month year in the PostController.php
         // It passes the data request from latest post in the PostController.php
@@ -53,6 +54,7 @@ class Post extends Model
         ->get()
         ->toArray();
     }
+    
     // Table name
     protected $table = 'posts';
     // Primary key field
