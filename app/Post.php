@@ -1,13 +1,9 @@
 <?php
-
 namespace App;
-
 use Illuminate\Database\Eloquent\Model;
-
 class Post extends Model
 {
-
-	public function comments()
+    public function comments()
     {
         // One post can have many commnets
         // here we specify and returns this
@@ -18,9 +14,9 @@ class Post extends Model
     {
         $this->comments()->create(compact(['user_id', 'body']));
     }
-
         //A QUERY SCOPE for the month year in the PostController.php
         // It passes the data request from latest post in the PostController.php
+
         public function scopeFilter($query, $filters)
         {
             // If we have requests month
@@ -38,7 +34,7 @@ class Post extends Model
             // $posts = $posts->get();
    
         }
-
+        
        //A comment also belongs to a user
        public function user()
        {
@@ -47,7 +43,6 @@ class Post extends Model
            return $this->belongsTo(User::class);
            
        }
-
     //Static Archives method?
     // thats returns our query
     public static function archives()
@@ -57,15 +52,11 @@ class Post extends Model
         ->orderByRaw('min(created_at)desc')
         ->get()
         ->toArray();
-
     }
     // Table name
-	protected $table = 'posts';
-
-	// Primary key field
-	public $primaryKey = 'id';
-
-	// Timestamps
-	public $timestamps = true;
-
+    protected $table = 'posts';
+    // Primary key field
+    public $primaryKey = 'id';
+    // Timestamps
+    public $timestamps = true;
 }

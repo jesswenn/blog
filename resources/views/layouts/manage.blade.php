@@ -1,6 +1,6 @@
 {{-- =======================================================
 
-  Here we view render out the main template for manage
+  Here we view render out the main template for manage CMS
 
 ==========================================================--}}
 <!DOCTYPE html>

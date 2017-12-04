@@ -1,7 +1,13 @@
-@extends('layouts.app')
+{{-- =====================================================
 
+	Here we render ALL POSTS for ALL users
+	and if no posts found an error message is shown
+
+========================================================--}}
+@extends('layouts.app')
 @section('content')
 	<h1>Our posts!</h1>
+
 		{{-- Here we loop truw our posts in our DB --}}
 		@if(count($posts) > 1)
 			@foreach($posts as $post)

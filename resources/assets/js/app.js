@@ -1,4 +1,9 @@
 
+// our main file
+
+// Here we impot refering our routes 
+// import routes from './routes.js'
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -11,15 +16,11 @@
 //in /assets
 require('./bootstrap');
 
-window.Vue = require('vue');
-// import Buefy from 'buefy'
+// MAybe need to require th SCSS here
+// require("!style!css!sass!./file.scss");
+// require(['./bootstrap', './dashboard.js']);
 
-// Vue.use(Bootstrap);
-
-// var app = new Vue({
-// 	el: '#app',
-// 	data:{}
-// });
+Vue.use(Bootstrap);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -27,5 +28,13 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue'));
+// Vue.component('example', require('./components/Example.vue'));
+// Vue.component('about', require('./components/About.vue'));
+// Vue.component('blog', require('./components/Blog.vue'));
 
+
+// //Passig the data it to our VUE instance
+const app = new Vue ({
+	el: '#app',
+	router
+});

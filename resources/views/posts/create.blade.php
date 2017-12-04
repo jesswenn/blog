@@ -1,3 +1,9 @@
+{{-- =====================================================
+
+	Here we create our POSTS, In our DASHBOARD
+	Here we can edit, delete and upload images to the DB
+
+========================================================--}}
 @extends('layouts.app')
 
 @section('content')

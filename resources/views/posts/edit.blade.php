@@ -1,9 +1,14 @@
+{{-- =====================================================
+
+		Add comment
+
+========================================================--}}
 @extends('layouts.app')
 
 @section('content')
 	<h1>Edit post<h1>
 
-	{{-- PostController instead of PostsController ? miss the s shouldent matter???? --}}
+	{{-- PostController --}}
 	{!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 		<div class="form-group">
 			{{Form::label('title', 'Title')}}
@@ -23,5 +28,4 @@
 		{{Form::hidden('_method', 'PUT')}}
 		{{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
 	{!! Form::close() !!}
-
 @endsection

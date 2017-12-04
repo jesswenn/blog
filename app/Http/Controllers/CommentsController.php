@@ -3,64 +3,100 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
 use App\Comment;
-// use Illuminate\Support\Facades\Auth;
+use App\Post;
+use Session;
 
 class CommentsController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+    }
 
-    // TO DO:
-    // This metod store in DB 
-    // You can just make comments on your own post
-    // Not one others post ??
-    public function store(Post $post)
-        {
-            // Required is how many signs when typing title comment?
-            $this->validate(request(), ['body' => 'required|min:2']);
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
 
-            $user_id = auth()->user()->id;
-            
-            // Add a comments to a post
-            $post->addComment(request('body'), $user_id);
+    public function create()
+    {
+        //
+    }
 
-            return back ();
-            // return response('Hello Comment');  
-            // return view($post->body);
-        }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
 
+    public function store(Request $request, $post_id)
+    {
+        // Required is how many signs when typing title comment?
+        $this->validate(request(), [
+            'body' => 'required|min:2'
+        ]);
+
+        // $user_id = auth()->user()->id;
         
+        // Add a comments to a post
+        $post->addComment(request('body'), $user_id);
+        $post->comments()->save($comment);       
 
+        return back ();
+        // return response('Hello Comment');  
+        // return view($post->body);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
 }
-        // Whit this ill get the rout to comments
-        //   /comments
-        // in the url
- //    	public function store(Post $post)
- //    	{
-	// 	$post->addComment(request('body'));
-		
-	// 		return back();
-	// }
-
-
-
-
-
-
-  //     public function store(Request $request)
-        // {
-        //     return $this->belongsTo(User::class);
-        // }
-
-
-
-
-        // public function store(Post $post)
-        // {
-        //     Comment::create([
-        //         'body' => request('body'),
-        //         'post_id' => $post->id
-        //     ]);
-
-        //     return back();
-        // }

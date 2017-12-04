@@ -26,12 +26,13 @@ class PagesController extends Controller
     	
     }
 
-     // Links the services page
-    // public function services(){
-    //     $data = array(
-    //         'title' => 'services',
-    //         'services' => ['Webdesign', 'Frontend', 'SEO']
-    //     );
-    // 	return view ('pages.services')->with( $data);
-    // }
+     // Links the contactpage
+    public function contact(){
+        // $data = array(
+        //     'title' => 'services',
+        //     'services' => ['Webdesign', 'Frontend', 'SEO']
+        // );
+    	$title = 'Contact us';
+        return view ('pages.contact')->with('title', $title);
+    }
 }

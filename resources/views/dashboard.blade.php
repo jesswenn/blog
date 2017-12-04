@@ -1,5 +1,9 @@
-@extends('layouts.app')
+{{-- ==========================================================
 
+      Rendering our DASHBOARD FOR OUR USER
+
+============================================================== --}}
+@extends('layouts.app')
 @section('content')
 <div class="container">
     <div class="row">

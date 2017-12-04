@@ -29,6 +29,7 @@
                 <li><a class="#" href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/posts">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -53,16 +54,17 @@
                                 <span class="icon"><i class="fa fa-fw m-r-10 fa-user-circle-o"></i></span>
                             Dashboard</a></li>
                         
-                        {{-- Redirects to Manage dashboard --}}
-                        <a href="{{route('manage.dashboard')}}">
-                                <span class="icon"><i class="fa fa-fw m-r-10 fa-user-circle-o"></i></span>
-                            Manage</a></li>
 
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
 
                             <span class="icon"><i class="fa fa-fw m-r-10 fa-sign-out"></i></span>
                             Logout</a>
+                        <hr>
+                             {{-- Redirects to Manage dashboard --}}
+                        <a href="{{route('manage.dashboard')}}">
+                                <span class="icon"><i class="fa fa-fw m-r-10 fa-user-circle-o"></i></span>
+                            Manage CMS</a></li>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}

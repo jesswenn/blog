@@ -19,8 +19,7 @@
 			    <label for="name">Name</label>
 			    <input id="name" type="name" class="form-control"  value="{{$user->name}}" required>
 			    {{-- <input id="name" type="text" class="form-control"  value="{{$user->name}}" required> --}}
-
-			  </div>
+			</div>
 
 			<div class="form-group">
 			    <label for="email">Email</label>
@@ -31,8 +30,6 @@
 				<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                        <label for="password" class="col-md-4 control-label">Password</label>
 				 
-
-
 	   				<div class="form-check">
 					    <label class="form-check-label">
 					     <input id="password" type="checkbox" value="keep" class="form-check-input">
@@ -54,7 +51,6 @@
 					    </label>
 					 </div>
 
-
 				        @if ($errors->has('password'))
                                <span class="help-block">
                                    <strong>{{ $errors->first('password') }}</strong>
@@ -62,13 +58,13 @@
                            @endif
                        </div>
 
-
 			  <button class="btn btn-primary m-t-15">Edit user</button>
 			</form>
 	
 	</div>{{-- END container --}}
 
 @endsection
+
 @section('scripts')
 	<script>
 		var app = new Vue({
@@ -78,4 +74,5 @@
 			}
 		});
 	</script>
+
 @endsection

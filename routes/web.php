@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,40 +16,52 @@
 // });
 
 // You dont want to return your vue from the route you make a controller
-
 // The function name is 
 // @index that we made in the pages controller
 Route::get('/', 'PagesController@index');
-Route::get('/about', 'PagesController@about');
-// Route::get('/services', 'PagesController@services');
+Route::get('about', 'PagesController@about');
+Route::get('/contact', 'PagesController@contact');
+
+// If we want the guest only to redirect  to surten pages do like this with the auth
+// Route::get('about', ['middleware' => 'auth', 'user' => 'PagesController@about']);
+
 
 // Create all routes for all functions we need
 // And Linking to ALL our posts on the page
 Route::resource('posts', 'PostsController');
 
-// Auth::routes();
 Auth::routes();
 
+//Dashboard controller
 Route::get('/dashboard', 'DashboardController@index');
 
+//=========================================================
+			
+			// TO DO! MAke the comments work
+			// Cmments Controller
+
+//=========================================================
 //Comments controller
 Route::post('/posts/{post}/comments', 'CommentsController@store');
+// Route::post('comments/{post_id', ['uses' => 'CommentsController@store', 'as' => 'comments.store']);
+
+// Route::post('comments/{post}',  [
+//     'as' => 'comments.store',
+//     'uses' => 'CommentsController@store'
+// ]);
 
 
-//CMS Manage backend
-// if surten user has this roles: they can access the CMS our backend
-Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function(){
+//=========================================================
+			
+			// CMS Manage backend
+
+//=========================================================
+// if a user has this one of this roles: they can access the CMS our backend
+Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor|supporter')->group(function(){
 	Route::get('/', 'ManageController@index');
 	Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
-
 	//Creates ALL routes that we want for our Manage dashboard CMS
 	Route::resource('/users', 'UserController');
 });
-
-
-
-
-
-
 
 

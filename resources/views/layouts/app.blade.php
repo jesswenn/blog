@@ -14,7 +14,7 @@
     <!-- TO DO ASK Frida:
         When importing this the CSS worked :)?????? -->
     <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -27,12 +27,27 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+
+{{-- ==========================================================
+
+      Rendering our VUE component links 
+
+============================================================== --}}
+      {{--  <div id="app">
+         <router-link to="/">Home</router-link> 
+         <router-link to="/about">About</router-link> 
+         <router-link to="/about">Blog</router-link> 
+
+         <router-view></router-view>
+      </div> --}}
+
     <div id="app">
         {{-- <textarea name="ckeditor" id="ckeditor" cols="30" rows="10"></textarea> --}}
             @include('inc.navbar')
 
             {{-- @include('layouts.sidebar') --}}
             <div class="container">
+                <div>
                 @include('inc.messages')
 
                 @yield('content')   
@@ -41,7 +56,6 @@
         </div>
         
     <!-- Scripts -->
-
     <script src="{{ asset('js/app.js') }}"></script>
     
     {{-- TO DO! Fixa så CKEDITOR synkas STÄMMER MED 
@@ -51,6 +65,7 @@
     {{-- <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script> --}}
 
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/assets/js/ckeditor.js"></script>
      {{-- <script src="//cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script‌​>  --}}
     <script>

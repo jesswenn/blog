@@ -15,7 +15,7 @@ CKEDITOR
 
 		Att kunna göra på Appen:
 
-	* Att endast se post när du är innloggad?
+	* Att endast se post när du är inloggad?
 
 
 
@@ -25,9 +25,6 @@ CKEDITOR
 
 // npm rebuild node-sass --force
 
-
-//Refreshes the DB
-php artisan migrate:refresh
 
 
 //Start a new laravel project
@@ -54,3 +51,11 @@ VAlet allows you to visit a project in browser without configuration,
 
 Mysquel setup, connecting via Msquel trow sequelpro.
 Composer install so we can requarie ant project we need.
+
+
+
+// Pushing to GITHUB
+
+git add .
+git commit -m "Comments changes here"
+git push
