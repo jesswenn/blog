@@ -9280,8 +9280,7 @@ template {
 
 /* Main css */
 
-/* ===========================================================
-	MAke your own custom style 
+/* 	MAke your own custom style 
 	here.
 	When run in terminal:
 	
@@ -9292,8 +9291,7 @@ template {
 	STOP: 
 	ctrl + c
 	and type: CLEAR
-	
-=========================================================== */
+-------------------------------------------------- */
 
 * {
   padding: 0px;
@@ -9327,12 +9325,8 @@ p {
   font-size: 1.5rem;
 }
 
-/* ============================================
-	
-	BTN – element
-	MAke the Create and Delete btn to work
-
-/* ============================================ */
+/* 	Button-MAke the Create and Delete btn to work
+-------------------------------------------------- */
 
 .btn {
   background-color: transparent;
@@ -9344,9 +9338,6 @@ p {
   text-transform: uppercase;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  /* NOT write important to override the bootstrap 
-		How do i overwrite the bootstrap easy 
-		What to think about */
 }
 
 .btn:hover {
@@ -9355,10 +9346,16 @@ p {
   color: #fff;
 }
 
+/* Custom page CSS
+-------------------------------------------------- */
+
+/* Not required for template or sticky footer method. */
+
 /* Sticky footer styles
 -------------------------------------------------- */
 
 .footer {
+  color: #fff;
   position: absolute;
   bottom: 0;
   width: 100%;

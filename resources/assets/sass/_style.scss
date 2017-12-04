@@ -1,5 +1,4 @@
-/* ===========================================================
-	MAke your own custom style 
+/* 	MAke your own custom style 
 	here.
 	When run in terminal:
 	
@@ -10,8 +9,7 @@
 	STOP: 
 	ctrl + c
 	and type: CLEAR
-	
-=========================================================== */
+-------------------------------------------------- */
 *{
 	padding: 0px;
 	margin: 0px;
@@ -45,12 +43,8 @@ p {
 }
 
 
-/* ============================================
-	
-	BTN – element
-	MAke the Create and Delete btn to work
-
-/* ============================================ */
+/* 	Button-MAke the Create and Delete btn to work
+-------------------------------------------------- */
 
 .btn {
 	background-color: transparent;
@@ -61,10 +55,7 @@ p {
   	font-family: $font-family-sans-serif;
 	text-transform: uppercase;
   	transition: all 0.2s ease-in-out;
-	
-	/* NOT write important to override the bootstrap 
-		How do i overwrite the bootstrap easy 
-		What to think about */
+
 	&:hover { 
 		background-color: #E2CC5F;
     		border-color: #E2CC5F;
@@ -72,16 +63,31 @@ p {
 	}
 }
 
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+// .container {
+//   width: auto;
+//   max-width: 680px;
+//   padding: 0 15px;
+// }
+
 /* Sticky footer styles
 -------------------------------------------------- */
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px; /* Set the fixed height of the footer here */
-  line-height: 60px; /* Vertically center the text there */
-  background-color: #000;
-  }
+	color: #fff;
+  	position: absolute;
+  	bottom: 0;
+  	width: 100%;
+  	height: 60px; /* Set the fixed height of the footer here */
+  	line-height: 60px; /* Vertically center the text there */
+  	background-color: #000;
+  	
+
+}
+
+
 
 
 

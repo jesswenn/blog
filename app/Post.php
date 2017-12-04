@@ -11,9 +11,9 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
-    public function addComment($comment, $user_id)
+    public function addComment($body, $user_id)
     {
-        $this->comments()->create(compact(['user_id', 'comment']));
+        $this->comments()->create(compact(['user_id', 'body']));
     }
         //A QUERY SCOPE for the month year in the PostController.php
         // It passes the data request from latest post in the PostController.php

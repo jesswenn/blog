@@ -52,8 +52,11 @@
 
                 @yield('content')   
                 {{-- @include('layouts.sidebar')  --}}
+                @include('layouts.footer') 
             </div>
         </div>
+        
+
         
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

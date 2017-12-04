@@ -38,7 +38,7 @@ class CommentsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(Request $request, $post_id)
+    public function store(Post $post)
     {
         // Required is how many signs when typing title comment?
         $this->validate(request(), ['body' => 'required|min:2']);
@@ -46,7 +46,7 @@ class CommentsController extends Controller
         $user_id = auth()->user()->id;
         // Add a comments to a post
         $post->addComment(request('body'), $user_id);
-        $post->comments()->save($comment);       
+        // $post->comments()->save($comment);       
 
         return back ();
         // return response('Hello Comment');  

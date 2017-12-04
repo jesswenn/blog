@@ -41,23 +41,25 @@
         Show comments form, a user can add comments on everyones post, 
         and when not logged in you cant see the comments in the blog
 =============================================================================== --}}
-        <div action="card">
-            <div class="card-block">    
-    
-                <form method="POST" action="/posts/{{$post->id}}/comments" required>
-                    {{ csrf_field() }}
-                    
-                    <div class="form-group">
-                        <textarea id="body" name="text" placeholder="Your comment here" class="form-control" required></textarea>
-                    </div>
+        @if(Auth::check())
+            <div action="card">
+                <div class="card-block">    
+        
+                    <form method="POST" action="/posts/{{$post->id}}/comments" required>
+                        {{ csrf_field() }}
+                        
+                        <div class="form-group">
+                            <textarea id="body" name="comment" placeholder="Your comment here" class="form-control" required></textarea>
+                        </div>
 
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Add comment</button>
-                    </div>
-                </form>
-            </div>{{-- END card-block --}}
-        </div>{{-- END card --}}    
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Add comment</button>
+                        </div>
+                    </form>
+                </div>{{-- END card-block --}}
+            </div>{{-- END card --}}    
         </div>
+    @endif
 @endif
 @endsection
 
