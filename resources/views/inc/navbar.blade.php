@@ -38,19 +38,32 @@
                     @else
                 </ul>
 
-                {{-- Dropdown menu when lkogged in to Dashboard / And logout --}}
+                {{-- Dropdown menu when logged in to Dashboard / And logout --}}
                 <li class="dropdown navbar-right">
-                    <a href="#" class="dropdown-toggle nav-wrapper-auth" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                    <a href="#" class="dropdown-toggle nav-wrapper-auth" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" style="position: relative;padding-left: 50px;">
+
+                        {{-- Avatar image in dropdown menu
+                            (abow) style="position: relative;padding-left: 50px; --}}
+                        <img src="/upload_image/avatars/{{ Auth::user()->avatar }}" style="width: 32px; height: 32px; position: absolute;top: 2px;left: 10px;border-radius: 50%;">
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
-
+                    
+                    {{-- Redirects to Public dashboard fol all user--}}
                     <ul class="dropdown-menu nav-wrapper-home" role="menu">
-                        <li>
-                            {{-- Redirects to Public dashboard fol all user--}}
-                            <a href="/dashboard">
+                        <li><a href="/dashboard">
                                 <span class="icon">
                                     <i class="fa fa-fw m-r-10 fa-user-circle-o"></i>
                                 </span>Dashboard</a></li>
+
+                        <li><a href="/posts">
+                                <span class="icon">
+                                    <i class="fa fa-fw m-r-10 fa-pencil-square-o"></i>
+                                </span>All posts</a></li>
+
+                        <li><a href="/profile">
+                                <span class="icon">
+                                    <i class="fa fa-fw m-r-10 fa-user"></i>
+                                </span>Profile</a></li>
                         
 
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -59,13 +72,14 @@
                             <span class="icon">
                                 <i class="fa fa-fw m-r-10 fa-sign-out"></i>
                             </span>Logout</a>
+
                         <hr>
                         
                         {{-- Redirects to Manage dashboard --}}
                         <a href="{{route('manage.dashboard')}}">
                                 <span class="icon">
-                                    <i class="fa fa-fw m-r-10 fa-user-circle-o"></i>
-                                </span>Manage CMS</a></li>
+                                    <i class="fa fa-fw m-r-10 fa-table"></i>
+                                </span>CMS</a></li>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}

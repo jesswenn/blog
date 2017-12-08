@@ -6,7 +6,12 @@ use Illuminate\Support\Facades\Hash;
 use App\User;
 use DB;
 use Session;
-// use Hash;
+use Auth;
+
+// Image for shorthand 
+//in intervention package
+use Image;
+// use Intervention\Image\ImageManagerStatic as Image;
 
 class UserController extends Controller
 {
@@ -169,5 +174,34 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    //////////////////////////////////////////////////////////
+
+          // User profile Avatar image
+
+    //////////////////////////////////////////////////////////
+      public function profile()
+    {
+        return view ('profile', array('user' =>Auth::user()));
+    }
+
+       public function update_avatar(Request $request)
+    {
+    // HAndle the user upload of image avatar
+    if($request->hasFile('avatar')) {
+        $avatar = $request->file('avatar');
+        $filename = time() . '.' . $avatar->getClientOriginalExtension();
+
+        Image::make($avatar)->resize(300, 300)->save(public_path('/upload_image/avatars/' . $filename));
+
+
+        $user = Auth::user();
+        $user->avatar = $filename;
+        // $user ->save();
+      }
+
+      return view ('profile', array('user' =>Auth::user()));
+      // return redirect('profile');
     }
 }

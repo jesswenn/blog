@@ -9282,10 +9282,10 @@ template {
 
 /* Main css */
 
-/*-------------------------------------------------- */
-
 /* Colours
 -------------------------------------------------- */
+
+/* -------------------------------------------------- */
 
 /* Fonts
 -------------------------------------------------- */
@@ -9304,7 +9304,7 @@ body {
   color: #3e3a47;
 }
 
-/* NA DROPDOWN NAV -container
+/* NAV DROPDOWN NAV -container
 -------------------------------------------------- */
 
 .dropdown-menu > li > a {
@@ -9460,10 +9460,12 @@ a.lightbox img {
   margin: 94px 20px 80px 20px;
 }
 
+/* SHOW ALL POST PAGE – images
+-------------------------------------------------- */
+
 .img-responsive {
-  border: 4px solid red;
+  padding-bottom: 10px;
   width: 100%;
-  height: 100%;
 }
 
 /* CMS /Manage  style */

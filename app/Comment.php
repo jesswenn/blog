@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     //A comment belongs to a post
-    protected $fillable = ['body', 'post_id'];
+    // protected $fillable = ['body', 'post_id'];
     
     public function post()
     {

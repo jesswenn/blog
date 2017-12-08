@@ -5,6 +5,7 @@ use Carbon;
 
 class Post extends Model
 {
+   
     public function comments()
     {
         // One post can have many commnets

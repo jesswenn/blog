@@ -1,11 +1,10 @@
 
-/*-------------------------------------------------- */
 	
 /* Colours
 -------------------------------------------------- */
 $text-color-main: #19d8a7;
 $text-color-links: #3e3a47;
-
+/* -------------------------------------------------- */
 /* Fonts
 -------------------------------------------------- */
 $font-family-sans-serif: 'Scope One', serif;
@@ -22,7 +21,7 @@ body {
 }
 
 
-/* NA DROPDOWN NAV -container
+/* NAV DROPDOWN NAV -container
 -------------------------------------------------- */
 .nav-container{
 	
@@ -178,8 +177,10 @@ a.lightbox img {
     margin: 94px 20px 80px 20px;
 }
 
+/* SHOW ALL POST PAGE – images
+-------------------------------------------------- */
 .img-responsive{
-	border: 4px solid red;
+	// border: 4px solid red;
+	padding-bottom: 10px;
 	width: 100%;
-	height: 100%;
 }

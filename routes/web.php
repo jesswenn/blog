@@ -22,10 +22,6 @@ Route::get('/', 'PagesController@index');
 Route::get('about', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
 
-// If we want the guest only to redirect  to surten pages do like this with the auth
-// Route::get('about', ['middleware' => 'auth', 'user' => 'PagesController@about']);
-
-
 // Create all routes for all functions we need
 // And Linking to ALL our posts on the page
 Route::resource('posts', 'PostsController');
@@ -35,6 +31,17 @@ Auth::routes();
 //Dashboard controller
 Route::get('/dashboard', 'DashboardController@index')->name('manage.dashboard');
 
+//User controller avatar image
+Route::get('/profile', 'UserController@profile');
+Route::post('/profile', 'UserController@update_avatar');
+
+// Route::get('foo', function() {
+//     $image = Image::make('http://placehold.it/500x500/000/e8117f');
+//     return Response::make($image->encode('jpg'), 200, ['Content-Type' => 'image/jpeg']);
+// });
+
+
+
 //=========================================================
 			
 			// TO DO! MAke the comments work
@@ -42,7 +49,7 @@ Route::get('/dashboard', 'DashboardController@index')->name('manage.dashboard');
 
 //=========================================================
 //Comments controller
-Route::post('/posts/{post}/comments', 'CommentsController@store');
+// Route::post('/posts/{post}/comments', 'CommentsController@store');
 // Route::post('comments/{post_id', ['uses' => 'CommentsController@store', 'as' => 'comments.store']);
 
 // Route::post('comments/{post}',  [

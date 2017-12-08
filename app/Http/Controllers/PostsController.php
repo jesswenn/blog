@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 // Bringing linking the Model here
 use App\Post;
+// use DB;
 class PostsController extends Controller
 {
     /**
@@ -90,6 +91,8 @@ class PostsController extends Controller
         $post = new Post;
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        // Post::create(request(['title', 'body']));
+
         //Auth current login user will get their id and save it in user_id DB
         $post->user_id =auth()->user()->id;
         $post->cover_image = $fileNameToStore;
