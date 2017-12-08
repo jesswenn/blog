@@ -4,15 +4,10 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laratrust\Traits\LaratrustUserTrait;
 
 class User extends Authenticatable
 {
     use Notifiable;
-
-    // Here is going to inheirith
-    // all functionalities lika has role etc.
-    use LaratrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -41,8 +36,8 @@ class User extends Authenticatable
     }
 
     // setPasswordAttribute set the encryption in DB
-     public function setPasswordAttribute($password)
-    {   
-        $this->attributes['password'] = bcrypt($password);
-    }
+    //  public function setPasswordAttribute($password)
+    // {   
+    //     $this->attributes['password'] = bcrypt($password);
+    // }
 }

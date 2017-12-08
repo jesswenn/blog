@@ -2,10 +2,10 @@
 
   Here we view render out the main template for manage CMS
 
-==========================================================--}}
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
+  ==========================================================--}}
+  <!DOCTYPE html>
+  <html lang="{{ app()->getLocale() }}">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,25 +18,25 @@
     
     <!-- TO DO ASK Frida:
         When importing this the CSS worked :)?????? -->
-    <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
 
-    {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
+        {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
 
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        {{-- <textarea name="ckeditor" id="ckeditor" cols="30" rows="10"></textarea> --}}
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div id="app">
+            {{-- <textarea name="ckeditor" id="ckeditor" cols="30" rows="10"></textarea> --}}
             @include('inc.navbar')
 
-              @include('inc.manage')
+            @include('inc.manage')
             {{-- @include('layouts.sidebar') --}}
             <div class="managment-area m-l-30" id="app">
                 @include('inc.messages')
@@ -46,21 +46,21 @@
             </div>
         </div>
         
-    <!-- Scripts -->
+        <!-- Scripts -->
 
-    <script src="{{ asset('js/app.js') }}"></script>
-    
+        <script src="{{ asset('js/app.js') }}"></script>
+        
     {{-- TO DO! Fixa så CKEDITOR synkas STÄMMER MED 
         textarea som tydligen måste finnas (se slack) --}}
 
-    {{-- CDN To ckeditor --}}
-    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script> --}}
+        {{-- CDN To ckeditor --}}
+        {{-- <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script> --}}
 
-    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-    <script src="/assets/js/ckeditor.js"></script>
-     {{-- <script src="//cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script‌​>  --}}
-    <script>
-        CKEDITOR.replace( 'article-ckeditor' );
-    </script>
-</body>
-</html>
+        <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+        <script src="/assets/js/ckeditor.js"></script>
+        {{-- <script src="//cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script‌​>  --}}
+            <script>
+                CKEDITOR.replace( 'article-ckeditor' );
+            </script>
+        </body>
+        </html>

@@ -1,0 +1,19 @@
+/* 	Button-MAke the Create and Delete btn to work
+-------------------------------------------------- */
+
+.btn {
+	background-color: transparent;
+	border-color: #19d8a7;
+	color: #19d8a7;
+	padding: 15px 40px;
+  	border-radius: 4px;
+  	font-family: $font-family-sans-serif;
+	text-transform: uppercase;
+  	transition: all 0.2s ease-in-out;
+
+	&:hover { 
+		background-color: #000;
+    		border-color: #E2CC5F;
+    		color: #19d8a7;
+	}
+}

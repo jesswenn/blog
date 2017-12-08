@@ -13,7 +13,7 @@ class PagesController extends Controller
 	
 	// Links the index page
     public function index(){
-        $title = 'Welcome to my Album';
+        $title = '#my Album';
          return view ('pages.index')->with('title', $title);
     	// return view ('pages.index', compact('title'));
 
@@ -21,7 +21,7 @@ class PagesController extends Controller
 
     // Links the about page
     public function about(){
-         $title = 'About us';
+         $title = 'About my album!';
          return view ('pages.about')->with('title', $title);
     	
     }

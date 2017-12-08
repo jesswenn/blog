@@ -7,6 +7,7 @@ use App\User;
 use DB;
 use Session;
 // use Hash;
+
 class UserController extends Controller
 {
     /**
@@ -14,6 +15,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         // $users = User::all();
@@ -57,6 +59,7 @@ class UserController extends Controller
             // with the has Request::password?????????????????????????????
         // Because session() isn't a static method. You can use the global request helper though:
        // $validationCode = request()->session()->get('validation_code', '');
+      
         //=========================================================================
         $this->validate($request, [
             'name' => 'required|max:255',
@@ -82,6 +85,7 @@ class UserController extends Controller
         //  THIS HAS::make dosent work?????????????????
         // $user->password =  Hash::make($password);
         $user->save();
+        
        if ($user->save()) {
            return redirect()->route('users.show', $user->id);
        }else{
@@ -96,6 +100,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
         $user = User::findOrFail($id);
@@ -107,6 +112,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function edit($id)
     {
         $user = User::findOrFail($id);
@@ -119,6 +125,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
         $request->user()->fill([
@@ -158,6 +165,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
     public function destroy($id)
     {
         //

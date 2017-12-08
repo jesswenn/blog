@@ -41,6 +41,7 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         return view('posts.create');
@@ -51,16 +52,19 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
         $this->validate($request, [
             'title'        =>'required',
             'body'         =>'required',
-            'cover_image'  => 'image|nullable|max:1999'     // Lets Party like its 1999...
+            'cover_image'  => 'image|nullable|max:1999'   
         ]);
+
+
         // HAndle file uppload
-        // If request clickchoose file
-        // if they didnt use the default image
+        // If request click choose file
+        // if the user didnt use the default image
         if ($request->hasFile('cover_image')) {
             
             // Get filename with extension
@@ -72,14 +76,16 @@ class PostsController extends Controller
             //File to store
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
             //Upload image
-            // IImage store to storage/app/publicber image
+            // IImage store to storage/app/public image
             // MAke a simlink so it can store in the public folder
             // run: php artisan storage:link
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
-            
+        
+        //If user dont upload image the default image take place 
         }else{ 
             $fileNameToStore = 'noimage.jpg';
         }
+
         //Create post
         $post = new Post;
         $post->title = $request->input('title');
@@ -97,6 +103,7 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
     $post = Post::find($id);
@@ -110,6 +117,7 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function edit($id)
     {
         $post = Post::find($id);
@@ -129,6 +137,7 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
     public function update(Request $request, $id)
     {
       
@@ -136,6 +145,7 @@ class PostsController extends Controller
             'title'=>'required',
             'body' =>'required'
         ]);
+
         //HAndle file uppload
         // If request clickchoose file
         // if they didnt use the default image
@@ -160,6 +170,7 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+
         if ($request->hasFile('cover_image')) {
             $post->cover_image = $fileNameToStore;
         }
@@ -173,6 +184,7 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
     {
         $post = Post::find($id);

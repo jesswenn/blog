@@ -1,6 +1,7 @@
 <?php
 namespace App;
 use Illuminate\Database\Eloquent\Model;
+use Carbon;
 
 class Post extends Model
 {
@@ -44,7 +45,8 @@ class Post extends Model
            return $this->belongsTo(User::class);
            
        }
-    //Static Archives method?
+
+    // Static Archives method?
     // thats returns our query
     public static function archives()
     {

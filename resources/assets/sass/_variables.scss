@@ -1,6 +1,6 @@
 
 /*  Body */
-$body-bg: #ccc;
+$body-bg: #fff;
 
 /*  Borders */
 $laravel-border-color: darken($body-bg, 10%);
@@ -12,13 +12,13 @@ $panel-inner-border: $laravel-border-color;
 /*  Brands */
 $brand-primary: #3097D1;
 $brand-info: #8eb4cb;
-$brand-success: #2ab27b;
+$brand-success: #19d8a7;
 $brand-warning: #cbb956;
-$brand-danger: #bf5329;
+$brand-danger: #e42d9f;
 
 /* Typography */
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-$font-family-sans-serif: 'Scope One', serif;
+/* $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";*/
+/* $font-family-sans-serif: 'Scope One', serif;*/
 
 $font-size-base: 14px;
 $line-height-base: 1.6;

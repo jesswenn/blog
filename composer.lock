@@ -1365,16 +1365,16 @@
         },
         {
             "name": "santigarcor/laratrust",
-            "version": "5.0.2",
+            "version": "5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/santigarcor/laratrust.git",
-                "reference": "5d3600d824d725b31cdd6b2aef697e56b3101b49"
+                "reference": "dcded937608c4b8e356968597903925a61fa06c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/5d3600d824d725b31cdd6b2aef697e56b3101b49",
-                "reference": "5d3600d824d725b31cdd6b2aef697e56b3101b49",
+                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/dcded937608c4b8e356968597903925a61fa06c5",
+                "reference": "dcded937608c4b8e356968597903925a61fa06c5",
                 "shasum": ""
             },
             "require": {
@@ -1387,7 +1387,7 @@
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "mockery/mockery": "^0.9.2",
+                "mockery/mockery": ">=0.9.9",
                 "orchestra/testbench": "~3.2",
                 "phpunit/phpunit": ">=4.1"
             },
@@ -1430,7 +1430,7 @@
                 "rbac",
                 "roles"
             ],
-            "time": "2017-10-30T04:55:00+00:00"
+            "time": "2017-12-02T21:56:51+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

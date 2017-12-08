@@ -1,24 +1,118 @@
-/* 	MAke your own custom style 
-	here.
-	When run in terminal:
+
+/*-------------------------------------------------- */
 	
-	RUN: 
-	npm run watch 
-	// Constant make it watch for errors and compile the css in publiv
-	
-	STOP: 
-	ctrl + c
-	and type: CLEAR
+/* Colours
 -------------------------------------------------- */
+$text-color-main: #19d8a7;
+$text-color-links: #3e3a47;
+
+/* Fonts
+-------------------------------------------------- */
+$font-family-sans-serif: 'Scope One', serif;
+/*-------------------------------------------------- */
 *{
 	padding: 0px;
 	margin: 0px;
+	box-sizing: border-box;
 }
 
 body {
 	font-family: $font-family-sans-serif;
+	color: $text-color-links;
 }
 
+
+/* NA DROPDOWN NAV -container
+-------------------------------------------------- */
+.nav-container{
+	
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 1.6;
+    color: $text-color-links;
+    white-space: nowrap;
+}
+
+/* SINGLE POST – links
+-------------------------------------------------- */
+.single-post{
+	color: $text-color-main;
+	border-radius: none;
+	
+	&:hover{
+		color: $text-color-links;
+		text-decoration: none;
+	}
+}
+
+
+/* NAV AND DROPDOWN HOME PAGE– 
+-------------------------------------------------- */
+.nav-wrapper {
+	overflow: hidden;
+	
+	li{
+		list-style: none;
+	}
+	
+	/* TO DO:::
+		On home page i want the nav to be fixed
+	 	but not on other pages
+	 */
+	/*  position: fixed;*/
+  	/*  top: 10%;*/
+}
+
+.nav-wrapper li a:hover {
+  background: rgba(192,192,192,0.3); 
+  padding-right: 200px;
+  color: $text-color-main;
+  -webkit-transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.nav-wrapper-home {
+  clear: left;
+  color: $text-color-links;
+  float: left;
+  font-size: 4em;
+  line-height: 1;
+  margin: 0 0 4px 0;
+  padding: 6px 12px;
+  margin-top: 50px;
+  margin: 4px;
+  text-transform: uppercase;
+  background-color: $text-color-main;
+}
+
+/* Login, Register links */
+.nav-wrapper-auth{
+	@extend .nav-wrapper-home;
+	 background-color: #ccc;
+	 color: #fff;
+	 font-size: 1.5em;
+	 
+	 &:hover{
+	 	color: $text-color-main;
+	 	text-decoration: none;
+	}
+}
+
+.dropdown {
+	list-style-type: none;
+	margin-top: 20px;
+}
+/* Dropdown links */
+
+
+/* ABOUT PAGE – background image
+-------------------------------------------------- */
 .front-image{
 	 /* Full height */
 	width: 100%;
@@ -28,67 +122,64 @@ body {
 	padding-right: 0 auto;
 	margin: 0;
 
-    /* Center and scale the image nicely */
+    /* Center and scale the image */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    
+    &:hover{
+    	cursor: pointer;
+    	// border: 4px solid red;
+    	  -webkit-filter: blur(2px);
+      filter: blur(2px);
+    }
 }
+
 p {
 	font-size: 2rem;
-	margin-top: 10px;
 }
 
 .author-written{
 	font-size: 1.5rem;
 }
 
-
-/* 	Button-MAke the Create and Delete btn to work
+/* About us page – box
 -------------------------------------------------- */
-
-.btn {
-	background-color: transparent;
-	border-color: #19d8a7;
-	color: #19d8a7;
-	padding: 15px 40px;
-  	border-radius: 4px;
-  	font-family: $font-family-sans-serif;
-	text-transform: uppercase;
-  	transition: all 0.2s ease-in-out;
-
-	&:hover { 
-		background-color: #E2CC5F;
-    		border-color: #E2CC5F;
-    		color: #fff;
-	}
+.about-box{
+	padding:30px;
+	color: #000;
+	background-color:#fff;
+	position: absolute;
+	margin-top: 350px;
+	margin-bottom: 300px;
+	transform: translateY(-100%); 
+	box-shadow: -20px 30px 0 $text-color-main;
 }
 
-
-/* Custom page CSS
+/* ALERT MESSAGE – colour
 -------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-// .container {
-//   width: auto;
-//   max-width: 680px;
-//   padding: 0 15px;
-// }
+.alert-success{
+	color: #000;
+	background-color: $text-color-main;
+}
 
-/* Sticky footer styles
--------------------------------------------------- */
-.footer {
+.alert-danger{
 	color: #fff;
-  	position: absolute;
-  	bottom: 0;
-  	width: 100%;
-  	height: 60px; /* Set the fixed height of the footer here */
-  	line-height: 60px; /* Vertically center the text there */
-  	background-color: #000;
-  	
-
+	background-color: #e42d9f;
 }
 
 
+/* CONTACT PAGE – light box
+-------------------------------------------------- */
+a.lightbox img {
+    height: 100vh;
+    border: 3px solid white;
 
+    margin: 94px 20px 80px 20px;
+}
 
-
-
+.img-responsive{
+	border: 4px solid red;
+	width: 100%;
+	height: 100%;
+}

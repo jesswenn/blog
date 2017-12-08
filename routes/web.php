@@ -33,7 +33,7 @@ Route::resource('posts', 'PostsController');
 Auth::routes();
 
 //Dashboard controller
-Route::get('/dashboard', 'DashboardController@index');
+Route::get('/dashboard', 'DashboardController@index')->name('manage.dashboard');
 
 //=========================================================
 			
@@ -49,19 +49,4 @@ Route::post('/posts/{post}/comments', 'CommentsController@store');
 //     'as' => 'comments.store',
 //     'uses' => 'CommentsController@store'
 // ]);
-
-
-//=========================================================
-			
-			// CMS Manage backend
-
-//=========================================================
-// if a user has this one of this roles: they can access the CMS our backend
-Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor|supporter')->group(function(){
-	Route::get('/', 'ManageController@index');
-	Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
-	//Creates ALL routes that we want for our Manage dashboard CMS
-	Route::resource('/users', 'UserController');
-});
-
 

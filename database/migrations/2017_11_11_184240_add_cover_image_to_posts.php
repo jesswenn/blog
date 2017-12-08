@@ -15,7 +15,7 @@ class AddCoverImageToPosts extends Migration
     {
         // When we submit our form
         // We need to save the name for the image to DB to acsses and display it
-        // and actualu upload the file so at it knows were to look for it
+        // and upload the file so it knows were to look for it
         Schema::table('posts', function($table){
             $table->string('cover_image');
         });

@@ -25,9 +25,9 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
-        
         // Get the logged in users id
         $user_id = auth()->user()->id;
 
