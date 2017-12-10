@@ -1,11 +1,15 @@
 {{-- =====================================================
 
-		Add comment
+		Edit page – here we edit our single
+		post via our dashboard
 
 ========================================================--}}
 @extends('layouts.app')
 
 @section('content')
+
+    <div class="row m-l-30">
+    <div class="col-sm-8 blog-main">
 	
 	<h1>Edit post<h1>
 

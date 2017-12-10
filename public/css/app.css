@@ -8894,7 +8894,7 @@ template {
 	My custom SASS pages
 ============================== */
 
-/* Helpers margins paddings into html classes */
+/* Helpers margins and paddings into html classes */
 
 .m-t-5 {
   margin-top: 5px !important;
@@ -9248,6 +9248,70 @@ template {
   padding-right: 75px !important;
 }
 
+.m-t-85 {
+  margin-top: 85px !important;
+}
+
+.p-t-85 {
+  padding-top: 85px !important;
+}
+
+.m-b-85 {
+  margin-bottom: 85px !important;
+}
+
+.p-b-85 {
+  padding-bottom: 85px !important;
+}
+
+.m-l-85 {
+  margin-left: 85px !important;
+}
+
+.p-l-85 {
+  padding-left: 85px !important;
+}
+
+.m-r-85 {
+  margin-right: 85px !important;
+}
+
+.p-r-85 {
+  padding-right: 85px !important;
+}
+
+.m-t-95 {
+  margin-top: 95px !important;
+}
+
+.p-t-95 {
+  padding-top: 95px !important;
+}
+
+.m-b-95 {
+  margin-bottom: 95px !important;
+}
+
+.p-b-95 {
+  padding-bottom: 95px !important;
+}
+
+.m-l-95 {
+  margin-left: 95px !important;
+}
+
+.p-l-95 {
+  padding-left: 95px !important;
+}
+
+.m-r-95 {
+  margin-right: 95px !important;
+}
+
+.p-r-95 {
+  padding-right: 95px !important;
+}
+
 .m-t-100 {
   margin-top: 100px !important;
 }
@@ -9282,12 +9346,12 @@ template {
 
 /* Main css */
 
-/* Colours
+/* 
+Colours
 -------------------------------------------------- */
 
-/* -------------------------------------------------- */
-
-/* Fonts
+/* 
+Fonts
 -------------------------------------------------- */
 
 /*-------------------------------------------------- */
@@ -9304,21 +9368,7 @@ body {
   color: #3e3a47;
 }
 
-/* NAV DROPDOWN NAV -container
--------------------------------------------------- */
-
-.dropdown-menu > li > a {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  font-weight: normal;
-  font-size: 2rem;
-  line-height: 1.6;
-  color: #3e3a47;
-  white-space: nowrap;
-}
-
-/* SINGLE POST – links
+/* SINGLE POST PAGE – links
 -------------------------------------------------- */
 
 .single-post {
@@ -9331,15 +9381,161 @@ body {
   text-decoration: none;
 }
 
-/* NAV AND DROPDOWN HOME PAGE– 
+/* 
+General style
+-------------------------------------------------- */
+
+p {
+  font-size: 2rem;
+}
+
+.author-written {
+  font-size: 1.5rem;
+}
+
+/* SHOW ALL POST PAGE – images
+-------------------------------------------------- */
+
+.img-responsive {
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+/* About page */
+
+/* 
+About page – box
+-------------------------------------------------- */
+
+.about-box {
+  min-height: 10vh;
+  margin-top: 300px;
+  color: #000;
+  background-color: #fff;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-box-shadow: -30px 30px 0 #19d8a7;
+          box-shadow: -30px 30px 0 #19d8a7;
+}
+
+/* Contact page */
+
+/* 
+CONTACT PAGE – light box markup
+-------------------------------------------------- */
+
+/* CONTACT INFO TEXT
+-------------------------------------------------- */
+
+.left {
+  float: left;
+  width: 50%;
+  padding-right: 30px;
+}
+
+.right {
+  float: right;
+  width: 50%;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.img-contact {
+  min-width: 70vh;
+}
+
+.contact-form {
+  margin-bottom: 50px;
+  font-family: 'Scope One', serif;
+}
+
+.form-control {
+  font-family: "Scope One", serif;
+}
+
+@media screen and (max-width: 480px) {
+  .left,
+  .right {
+    float: none;
+    width: auto;
+  }
+
+  .img-contact {
+    width: 10vh;
+  }
+}
+
+/* Profile page */
+
+/* 
+FILE UPLOAD AVATAR – 
+profile image big and small 
+-------------------------------------------------- */
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+}
+
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.img-fileUpload {
+  width: 150px;
+  height: 150px;
+  float: left;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.img-fileUpload-small {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  right: 5px;
+  border-radius: 50%;
+}
+
+/* PROFILE PAGE FORM – try align btn align??????
+-------------------------------------------------- */
+
+.one {
+  border: none;
+  z-index: 2;
+  height: auto;
+}
+
+/* Home page */
+
+/* 
+HOME PAGE – grid, image
+-------------------------------------------------- */
+
+/* 
+NAV AND DROPDOWN HOME PAGE– 
 -------------------------------------------------- */
 
 .nav-wrapper {
   overflow: hidden;
   /* TO DO:::
-		On home page i want the nav to be fixed
-	 	but not on other pages
-	 */
+    On home page i want the nav to be fixed
+    but not on other pages
+   */
   /*  position: fixed;*/
   /*  top: 10%;*/
 }
@@ -9357,7 +9553,8 @@ body {
 }
 
 .nav-wrapper-home,
-.nav-wrapper-auth {
+.nav-wrapper-auth,
+.dropdown {
   clear: left;
   color: #3e3a47;
   float: left;
@@ -9371,27 +9568,8 @@ body {
   background-color: #19d8a7;
 }
 
-/* Login, Register links */
-
-.nav-wrapper-auth {
-  background-color: #ccc;
-  color: #fff;
-  font-size: 1.5em;
-}
-
-.nav-wrapper-auth:hover {
-  color: #19d8a7;
-  text-decoration: none;
-}
-
-.dropdown {
-  list-style-type: none;
-  margin-top: 20px;
-}
-
-/* Dropdown links */
-
-/* ABOUT PAGE – background image
+/* 
+Images and css grid
 -------------------------------------------------- */
 
 .front-image {
@@ -9413,69 +9591,6 @@ body {
   -webkit-filter: blur(2px);
   filter: blur(2px);
 }
-
-p {
-  font-size: 2rem;
-}
-
-.author-written {
-  font-size: 1.5rem;
-}
-
-/* About us page – box
--------------------------------------------------- */
-
-.about-box {
-  padding: 30px;
-  color: #000;
-  background-color: #fff;
-  position: absolute;
-  margin-top: 350px;
-  margin-bottom: 300px;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-box-shadow: -20px 30px 0 #19d8a7;
-          box-shadow: -20px 30px 0 #19d8a7;
-}
-
-/* ALERT MESSAGE – colour
--------------------------------------------------- */
-
-.alert-success {
-  color: #000;
-  background-color: #19d8a7;
-}
-
-.alert-danger {
-  color: #fff;
-  background-color: #e42d9f;
-}
-
-/* CONTACT PAGE – light box
--------------------------------------------------- */
-
-a.lightbox img {
-  height: 100vh;
-  border: 3px solid white;
-  margin: 94px 20px 80px 20px;
-}
-
-/* SHOW ALL POST PAGE – images
--------------------------------------------------- */
-
-.img-responsive {
-  padding-bottom: 10px;
-  width: 100%;
-}
-
-/* CMS /Manage  style */
-
-/*  @import "manage"; */
-
-/* Grid */
-
-/* HOME PAGE – grid, image
--------------------------------------------------- */
 
 .box e {
   /*background-color: #fff;*/
@@ -9530,55 +9645,73 @@ a.lightbox img {
   grid-column: 1 / span 3;
 }
 
-/* Contact */
+/* Dropdown */
 
-/* CONTACT PAGE – light box markup
+/* 
+NAV DROPDOWN NAV -container
 -------------------------------------------------- */
 
-.thumbnail {
-  max-width: 20%;
-}
-
-/** LIGHTBOX IMG **/
-
-.lightbox {
-  /** Default lightbox to hidden */
-  display: none;
-  /** Position and style */
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.lightbox img {
-  /** Padding the lightbox image */
-  max-width: 90%;
-  max-height: 80%;
-  margin-top: 2%;
-}
-
-.lightbox:target {
-  /** Remove default browser outline */
-  outline: none;
-  /** Unhide lightbox **/
+.dropdown-menu > li > a {
   display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #3e3a47;
+  white-space: nowrap;
 }
 
-/* Close link
+/* 
+LOGIN AND REGISTER 
+AND DROPDOWN BTN LINKS
 -------------------------------------------------- */
 
-.light-box-close-link {
-  color: #fff;
+.nav-wrapper-auth,
+.dropdown {
+  background-color: #f5f5f5;
+  color: #19d8a7;
+  font-size: 1em;
 }
 
-/* buttons */
+.nav-wrapper-auth:hover,
+.dropdown:hover {
+  color: #3e3a47;
+  text-decoration: none;
+}
 
-/* 	Button-MAke the Create and Delete btn to work
+.dropdown {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  .nav-wrapper-auth,
+  .dropdown {
+    margin-left: 30px;
+  }
+
+  .dropdown {
+    margin-left: 30px;
+  }
+}
+
+/* Create post page */
+
+/* 
+CREATE POSTS page
+-------------------------------------------------- */
+
+@media screen and (max-width: 480px) {
+  .form-group {
+    width: 100vh;
+  }
+}
+
+/* Buttons */
+
+/* 	
+Button
 -------------------------------------------------- */
 
 .btn {
@@ -9591,27 +9724,20 @@ a.lightbox img {
   text-transform: uppercase;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  margin-bottom: 10px;
 }
 
 .btn:hover {
-  background-color: #000;
-  border-color: #E2CC5F;
+  background-color: #3e3a47;
   color: #19d8a7;
 }
 
-/* footer */
+/* Footer */
 
 /* FOOTER PAGE 
 -------------------------------------------------- */
 
-.footer {
-  color: #fff;
-  min-height: 10vh;
-  width: 100%;
-  line-height: 60px;
-  background-color: #19d8a7;
-  text-align: center;
-  padding: 2em;
-  margin-top: 1em;
-}
+/* CMS /Manage  style */
+
+/*  @import "manage"; */
 

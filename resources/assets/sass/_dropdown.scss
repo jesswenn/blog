@@ -1,0 +1,55 @@
+/* 
+NAV DROPDOWN NAV -container
+-------------------------------------------------- */
+.nav-container{
+
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: $text-color-links;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+    .dropdown-menu {
+
+    }
+}
+
+/* 
+LOGIN AND REGISTER 
+AND DROPDOWN BTN LINKS
+-------------------------------------------------- */
+.nav-wrapper-auth{
+    @extend .nav-wrapper-home;
+    background-color: $text-color-boxes;
+    color: $text-color-main;
+    font-size: 1em;
+   
+    &:hover{
+        color: $text-color-base;
+        text-decoration: none;
+    }
+}
+
+.dropdown {
+  @extend .nav-wrapper-auth;
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 480px) {
+    .nav-wrapper-auth {
+        margin-left: 30px;
+    }
+
+    .dropdown {
+        margin-left: 30px;
+    }
+}

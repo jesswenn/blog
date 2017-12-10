@@ -1,0 +1,123 @@
+/* 
+HOME PAGE – grid, image
+-------------------------------------------------- */
+
+/* 
+NAV AND DROPDOWN HOME PAGE– 
+-------------------------------------------------- */
+.nav-wrapper {
+  overflow: hidden;
+  
+  li{
+    list-style: none;
+  }
+  
+  /* TO DO:::
+    On home page i want the nav to be fixed
+    but not on other pages
+   */
+  /*  position: fixed;*/
+    /*  top: 10%;*/
+}
+
+.nav-wrapper li a:hover {
+  background: rgba(192,192,192,0.3); 
+  padding-right: 200px;
+  color: $text-color-main;
+  -webkit-transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.nav-wrapper-home {
+  clear: left;
+  color: $text-color-links;
+  float: left;
+  font-size: 4em;
+  line-height: 1;
+  margin: 0 0 4px 0;
+  padding: 6px 12px;
+  margin-top: 50px;
+  margin: 4px;
+  text-transform: uppercase;
+  background-color: $text-color-main;
+}
+
+
+/* 
+Images and css grid
+-------------------------------------------------- */
+.front-image{
+   /* Full height */
+  width: 100%;
+  height:100%;
+  height:calc(100% - 1px);
+  padding-left: 0 auto;
+  padding-right: 0 auto;
+  margin: 0;
+
+    /* Center and scale the image */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &:hover{
+      cursor: pointer;
+      // border: 4px solid red;
+        -webkit-filter: blur(2px);
+      filter: blur(2px);
+    }
+}
+
+.box e {
+ 	/*background-color: #fff;*/
+ }
+
+.wrapper {
+      display: grid;
+      /*display: flex; *//* Stack on row */
+      grid-gap: 10px;
+      grid-template-columns: 300px 300px 500px;
+      padding-bottom: 50px;
+      display: grid;
+      /* Display as a Grid */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     /* 
+     repeat = as many times as you can fit 
+     auto-fit = fit as many items on the line as possible, go bigger if you need to 
+   	minmax = (min size, max size) = the minimum size the column 
+     should be is 200px, but if there's space then give them all 1fr of that width. 
+	*/
+}
+
+.box {
+      /*background-color: #444;*/
+      color: #fff;
+      border-radius: 5px;
+      /*padding: 10px;*/
+      /*font-size: 150%;*/
+      }
+
+      .a {
+      	grid-column: 1 / span 2;
+      }
+
+      .b {
+	      grid-column: 3;
+	      grid-row: 1 / span 2;
+      }
+
+      .c {
+	      grid-column: 1 ;
+	      grid-row: 2 ;
+      }
+
+      .d {
+	      grid-column: 2 ;
+	      grid-row: 2 ;
+      }
+
+      .e {
+      	grid-column: 1 / span 3;
+}
+
+

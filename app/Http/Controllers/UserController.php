@@ -23,7 +23,6 @@ class UserController extends Controller
 
     public function index()
     {
-        // $users = User::all();
         // TO DO! Make the pagination not so Botstrap fix CSS
         $users = User::orderBy('id', 'desc')->paginate(4);
         return view('manage.users.index')->withUsers($users);
@@ -36,12 +35,6 @@ class UserController extends Controller
     public function create()
     {
         return view('manage.users.create');
-        
-        // return User::create([
-        //     'name' => $data['name'],
-        //     'email' => $data['email'],
-        //     'password' => bcrypt($data['password']),
-        // ]);
     }
     /**
      * Store a newly created resource in storage.
@@ -51,38 +44,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // The array withe the saved user 
-        //is shown on page so ti stores
-        // dd($request->all());
-        // $name = $request->input('user.name');
-         // $name = $request->input('name');
-         // $input = $request->all();
-        //=========================================================================
-            
-            // When to store the user and password in DB
-            // failiur shows
-            // with the has Request::password?????????????????????????????
-        // Because session() isn't a static method. You can use the global request helper though:
-       // $validationCode = request()->session()->get('validation_code', '');
-      
-        //=========================================================================
         $this->validate($request, [
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users'
         ]);
-       //  if (Request::has('password') && !empty($request->password)) {
-       //      $password = trim ($request->password);
-       //  }else {
-       //      //set manual password
-       //      $lenght = 10;
-       //      $keyspace = '123456789abcdefghijklmnopqrstuvxyz ABCDEFGHIJKLMNOPQRSTUVXYZ';
-       //      $str ='';
-       //      $max = mb_strlen($keyspace, '8bit') - 1;
-       //      for ($i = 0; $i < $lenght; ++$i) { 
-       //          $str .= $keyspace[random_int(0, $max)];
-       //      }
-       //      $password = $str;
-       //  }
+    
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
@@ -141,28 +107,6 @@ class UserController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users,email,'.$id
         ]);
-        
-       //  $user = User::findOrFail($id);
-       //  $user->name = $request->name;
-       //  $user->email = $request->email;
-       //  if ($request->password_options == 'auto') {
-       //      $lenght = 10;
-       //      $keyspace = '123456789abcdefghijklmnopqrstuvxyz ABCDEFGHIJKLMNOPQRSTUVXYZ';
-       //      $str ='';
-       //      $max = mb_strlen($keyspace, '8bit') - 1;
-       //      for ($i = 0; $i < $lenght; ++$i) { 
-       //          $str .= $keyspace[random_int(0, $max)];
-       //      }
-       //      $password = $str;
-       //  }elseif ($request->password_options == 'manual') {
-       //      $user->password = Has::make($request->password);
-       //  }
-       //  if ($user->save()) {
-       //     return redirect()->route('user.show', $id);
-       // }else{
-       //  Session::flash('danger', 'Sorrry a problem has occured whille updating user info to database');
-       //  return redirect()->route('users.edit', $id);
-       //  }
     }
     /**
      * Remove the specified resource from storage.
@@ -188,13 +132,17 @@ class UserController extends Controller
 
        public function update_avatar(Request $request)
     {
+
+        $this->validate($request, [
+            'avatar'  => 'image|nullable|max:1999'   
+        ]);
+
     // HAndle the user upload of image avatar
     if($request->hasFile('avatar')) {
         $avatar = $request->file('avatar');
         $filename = time() . '.' . $avatar->getClientOriginalExtension();
 
         Image::make($avatar)->resize(300, 300)->save(public_path('/upload_image/avatars/' . $filename));
-
 
         $user = Auth::user();
         $user->avatar = $filename;

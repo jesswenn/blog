@@ -1,4 +1,5 @@
-/* 	Button-MAke the Create and Delete btn to work
+/* 	
+Button
 -------------------------------------------------- */
 
 .btn {
@@ -10,10 +11,12 @@
   	font-family: $font-family-sans-serif;
 	text-transform: uppercase;
   	transition: all 0.2s ease-in-out;
-
+  	margin-bottom: 10px;
+  	
 	&:hover { 
-		background-color: #000;
-    		border-color: #E2CC5F;
+		background-color: $text-color-base;
     		color: #19d8a7;
 	}
 }
+
+

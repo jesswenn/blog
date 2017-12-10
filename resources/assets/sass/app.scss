@@ -31,24 +31,37 @@
 /*==============================
 	My custom SASS pages
 ============================== */
-/* Helpers margins paddings into html classes */
+/* Helpers margins and paddings into html classes */
 @import "helpers";
 
 /* Main css */
 @import "style";
 
-/* CMS /Manage  style */
-/*  @import "manage"; */
+/* About page */
+@import "about";
 
-/* Grid */
-@import "grid";
-
-/* Contact */
+/* Contact page */
 @import "contact";
 
-/* buttons */
+/* Profile page */
+@import "profileimage";
+
+/* Home page */
+@import "home";
+
+/* Dropdown */
+@import "dropdown";
+
+/* Create post page */
+@import "createpost";
+
+/* Buttons */
 @import "buttons";
 
-/* footer */
+/* Footer */
 @import "footer";
+
+
+/* CMS /Manage  style */
+/*  @import "manage"; */
 

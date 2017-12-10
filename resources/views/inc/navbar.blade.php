@@ -1,14 +1,20 @@
- {{-- THE AUTH METHOD THATS INCLUDED WHEN MAKING php artisan make:auth Obs! it will replace your app.blade.php --}}
+{{-- ================================================ 
+    THE AUTH METHOD THATS INCLUDED WHEN MAKING 
+    php artisan make:auth Obs! it will 
+    replace your app.blade.php 
+===================================================== --}}
 
 {{-- <nav class="navbar navbar-inverse"> --}}
 <div class="nav-container">
     <div class="container">
+
+    <div class="row">
         
         <!-- Branding Image / Maybe a logo here? Instead of Album name? -->
         {{-- <div class="navbar-header"> --}}
 
             <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#app-navbar-collapse"    aria-expanded="false">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -44,8 +50,9 @@
 
                         {{-- Avatar image in dropdown menu
                             (abow) style="position: relative;padding-left: 50px; --}}
-                        <img src="/upload_image/avatars/{{ Auth::user()->avatar }}" style="width: 32px; height: 32px; position: absolute;top: 2px;left: 10px;border-radius: 50%;">
+                        
                         {{ Auth::user()->name }} <span class="caret"></span>
+                        <img class="img-fileUpload-small" src="/upload_image/avatars/{{ Auth::user()->avatar }}">
                     </a>
                     
                     {{-- Redirects to Public dashboard fol all user--}}
@@ -92,4 +99,5 @@
             </ul>
         </div>
     </div>
+</div>{{-- END row --}} 
 </div>{{-- END nav-container --}} 
