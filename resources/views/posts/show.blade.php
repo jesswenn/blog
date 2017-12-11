@@ -43,30 +43,46 @@
 
 
 {{-- ========================================================================= 
-        Show comments form, a user can add comments on everyones post,  
-        and when not logged in you cant see the comments in the blog 
+        Show comments, created at wiht 
+        diffForHumans the carbon library
 =============================================================================== --}} 
-        @if(Auth::check()) 
-        <div action="card"> 
-            <div class="card-block">     
+        <div class="comments">
+            <ul class="list-group">
+                
+            
+                @foreach($post->comments as $comment)
+                    <li class="list-group-item">
+                        <strong>
+                            {{ $comment->created_at->diffForHumans() }}:
+                        </strong>
+                        {{ $comment->body }}
+                    </li>
 
-                <form method="POST" action="/posts/{{$post->id}}/comments" required> 
-                    {{ csrf_field() }} 
+                @endforeach
+            </ul>
+        </div>
 
-                    <div class="form-group"> 
-                        <textarea id="body" name="comment" placeholder="Your comment here" class="form-control" required></textarea> 
-                    </div> 
+        {{-- Add comment --}}
 
-                    <div class="form-group"> 
-                        <button type="submit" class="btn btn-primary">Add comment</button> 
-                    </div> 
-                </form> 
-            </div>{{-- END card-block --}} 
-        </div>{{-- END card --}}     
-    </div> 
-@endif 
-@endif 
+        <div class="card">
+            <div class="card-block">
+                <form method="POST" action="/posts/{{ $post->id }}/comments">
+                    {{ csrf_field() }}
 
+                    <div class="form-group">
+                        <textarea name="body" placeholder="Your comment here" class="form-control" required>
+                        </textarea>
+                    </div>{{-- End form-group --}}
+
+                    <div class="form-group">
+                       <button type="submit" class="btn btn-primary">Add comment</button>
+                    </div>{{-- End form-group --}}
+                </form>
+
+                @include('inc.messages');
+                
+            </div>{{-- End card-block --}}
+        </div>{{-- End card --}}
 
 
 {{-- ========================================================================= 
@@ -80,4 +96,5 @@
     {{Form::hidden('_method', 'DELETE')}} 
     {{Form::submit('Delete', ['class' => 'btn btn-danger btn'])}} 
     {!!Form::close()!!} 
+    @endif 
 @endsection

@@ -9568,6 +9568,8 @@ NAV AND DROPDOWN HOME PAGE–
   background-color: #19d8a7;
 }
 
+/* Image grid*/
+
 /* 
 Images and css grid
 -------------------------------------------------- */
@@ -9617,7 +9619,6 @@ Images and css grid
 .box {
   /*background-color: #444;*/
   color: #fff;
-  border-radius: 5px;
   /*padding: 10px;*/
   /*font-size: 150%;*/
 }
@@ -9627,8 +9628,13 @@ Images and css grid
 }
 
 .b {
+  background-color: #19d8a7;
   grid-column: 3;
   grid-row: 1 / span 2;
+}
+
+.b .box-b-text {
+  color: #000;
 }
 
 .c {
@@ -9642,6 +9648,10 @@ Images and css grid
 }
 
 .e {
+  grid-column: 1 / span 3;
+}
+
+.f {
   grid-column: 1 / span 3;
 }
 

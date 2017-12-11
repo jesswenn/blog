@@ -1,76 +1,70 @@
-<!DOCTYPE html> 
-<html lang="{{ app()->getLocale() }}"> 
-<head> 
-  <meta charset="utf-8"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- CSRF Token --> 
-  <meta name="csrf-token" content="{{ csrf_token() }}"> 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <!-- CDN Font awesome --> 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!-- CDN Font awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- TO DO ASK ! 
-      When importing this the CSS worked :)?????? --> 
-      <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet"> 
+When importing this the CSS worked :)?????? -->
+    <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
 
-      <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> 
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-      {{-- <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> --}} 
+    {{--
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> --}}
 
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-      <title>{{ config('app.name', 'Laravel') }}</title> 
-
-      <!-- Styles --> 
-      <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
-    </head> 
-    <body> 
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body>
 
 {{-- ========================================================== 
 
-      Rendering our VUE component links  
+    Rendering our VUE component links 
 
-============================================================== --}} 
-      {{--  <div id="app"> 
-         <router-link to="/">Home</router-link>  
-         <router-link to="/about">About</router-link>  
-         <router-link to="/about">Blog</router-link>  
+============================================================== --}} {{--
+    <div id="app">
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/about">Blog</router-link>
 
-         <router-view></router-view> 
-       </div> --}} 
+        <router-view></router-view>
+    </div> --}}
 
-       <div id="app"> 
-        {{-- <textarea name="ckeditor" id="ckeditor" cols="30" rows="10"></textarea> --}} 
-        @include('inc.navbar') 
-        {{-- @include('layouts.sidebar') --}} 
+    <div id="app">
+        {{--
+        <textarea name="ckeditor" id="ckeditor" cols="30" rows="10"></textarea> --}} @include('inc.navbar') {{-- @include('layouts.sidebar') --}}
 
-        <div class="container"> 
-            @include('inc.messages') 
-        <div> 
+        <div class="container">
+            @include('inc.messages')
+            <div>
 
-          @yield('content')   
-          {{-- @include('layouts.sidebar')  --}} 
-         {{--  @include('layouts.footer')   --}}
-        </div> 
-      </div> 
+                @yield('content') {{-- @include('layouts.sidebar') --}} {{-- @include('layouts.footer') --}}
+            </div>
+        </div>
 
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}"></script>
 
-      <!-- Scripts --> 
-      <script src="{{ asset('js/app.js') }}"></script> 
+        {{-- TO DO! Fixa så CKEDITOR synkas STÄMMER MED textarea som tydligen måste finnas (se slack) --}} {{-- CDN To ckeditor --}} {{--
+        <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script> --}}
 
-    {{-- TO DO! Fixa så CKEDITOR synkas STÄMMER MED  
-      textarea som tydligen måste finnas (se slack) --}} 
+        <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="/assets/js/ckeditor.js"></script>
+        {{--<script src="//cdn.ckeditor.com/4.5.7/standard/ckeditor.js">< /script‌​>  --}}  
+          <script>
+                CKEDITOR.replace('article-ckeditor');
+        </script>
+</body>
 
-      {{-- CDN To ckeditor --}} 
-      {{-- <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script> --}} 
-
-      <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script> 
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
-      <script src="/assets/js/ckeditor.js"></script> 
-      {{-- <script src="//cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script‌​>  --}} 
-        <script> 
-          CKEDITOR.replace( 'article-ckeditor' ); 
-        </script> 
-      </body> 
-      </html>
+</html>
