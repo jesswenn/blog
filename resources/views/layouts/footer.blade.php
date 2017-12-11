@@ -8,7 +8,7 @@
 
     <div class="row">
 	    <div class="col-sm-8 blog-main">
-		<footer class="footer" ">
+		<footer class="footer">
 		   	Footer
 	   </footer>
 @endsection --}}

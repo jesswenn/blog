@@ -36,6 +36,17 @@ class PostsController extends Controller
         // The pagination kicks in when reach 11 posts
         $posts = Post::orderBy('created_at', 'desc')->paginate(10);
             return view('posts.index')->with('posts', $posts);
+
+        $posts = Post::latest()->get();
+
+        $archives= Post::selectRaw('year(created_at) year, monthname(created_at) month, count(*) published')
+            ->groupBy('year', 'month')
+            ->get()->toArray();
+
+            return $archives;
+
+            return view('posts.index', compact('posts', 'archives'));
+
     }
     /**
      * Show the form for creating a new resource.

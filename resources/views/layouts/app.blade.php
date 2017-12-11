@@ -40,17 +40,28 @@ When importing this the CSS worked :)?????? -->
         <router-view></router-view>
     </div> --}}
 
-    <div id="app">
-        {{--
-        <textarea name="ckeditor" id="ckeditor" cols="30" rows="10"></textarea> --}} @include('inc.navbar') {{-- @include('layouts.sidebar') --}}
+        <div id="app">
+            
+            @include('inc.navbar')
 
-        <div class="container">
-            @include('inc.messages')
-            <div>
+                <div class="container">
+                  
+                    <div class="row">
+                        @yield('content')
 
-                @yield('content') {{-- @include('layouts.sidebar') --}} {{-- @include('layouts.footer') --}}
-            </div>
-        </div>
+                        {{-- @include('layouts.sidebar') --}}
+
+                        {{-- @include('inc.messages') --}}
+    
+                </div>{{-- END row --}}
+
+            </div>{{-- END container --}}
+
+        </div>{{-- END app --}}
+
+    @include('layouts.footer')
+
+
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>

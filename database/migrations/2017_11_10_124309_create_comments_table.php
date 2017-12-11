@@ -16,8 +16,7 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->text('comment');
-            $table->boolean('approve');
+      
 
             //A link between the post and comment
             $table->integer('post_id');
