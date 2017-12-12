@@ -47,7 +47,6 @@ class CommentsController extends Controller
 
         $post->addComment(request('body'));
     
-
         return back();
     }
 
