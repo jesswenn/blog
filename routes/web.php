@@ -22,6 +22,13 @@ Route::get('/', 'PagesController@index');
 Route::get('about', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
 
+// Route::get('/email', 'PagesController@email')->name('sendEmail');
+
+//Mail route
+Route::get('send', 'MailController@send');
+// Route::get('email', 'MailController@email');
+
+
 // Create all routes for all functions we need
 // And Linking to ALL our posts on the page
 Route::resource('posts', 'PostsController');
@@ -37,6 +44,7 @@ Route::post('/profile', 'UserController@update_avatar');
 
 //Comments
 Route::post('/posts/{post}/comments', 'CommentsController@store');
+
 
 
 

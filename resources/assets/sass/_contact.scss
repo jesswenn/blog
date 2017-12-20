@@ -30,11 +30,16 @@ CONTACT PAGE – light box markup
 
 .contact-form{
 	margin-bottom: 50px;
-	font-family: 'Scope One', serif;
+	font-family: $font-family-sans-serif;
+    
+    // &:hover{
+    //     outline: none !important;
+    //     box-shadow: none;
+    // }
 }
 
 .form-control{
-	font-family:$font-family-sans-serif; 
+	font-family: $font-family-sans-serif; 
 }
 
 @media screen and (max-width: 480px) {

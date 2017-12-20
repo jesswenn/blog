@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Fawicon -->
+    <link rel="shortcut icon" href="{{{ asset('upload_image/favicon.png') }}}">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -12,70 +15,51 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- TO DO ASK ! 
-When importing this the CSS worked :)?????? -->
+        When importing this the CSS worked :)?????? -->
     <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
 
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    {{-- Bootstrap CDB --}}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
-    {{--
-    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> --}}
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Styles -->
+    <!-- Styles CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
-
-{{-- ========================================================== 
-
-    Rendering our VUE component links 
-
-============================================================== --}} {{--
-    <div id="app">
+    {{-- Render VUE coponent --}}
+{{--     <div id="app">
         <router-link to="/">Home</router-link>
         <router-link to="/about">About</router-link>
         <router-link to="/about">Blog</router-link>
-
         <router-view></router-view>
     </div> --}}
 
-        <div id="app">
-            
-            @include('inc.navbar')
 
-                <div class="container">
-                  
-                    <div class="row">
-                        @yield('content')
+    <div class="container">
+        <div class="row">
+            @include('layouts.navbar')
 
-                        {{-- @include('layouts.sidebar') --}}
+            @yield('content')
 
-                        {{-- @include('inc.messages') --}}
-    
-                </div>{{-- END row --}}
-
-            </div>{{-- END container --}}
-
-        </div>{{-- END app --}}
-
+        </div> {{-- END row --}} 
+    </div> {{-- END container--}}                          
     @include('layouts.footer')
-
-
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
-
-        {{-- TO DO! Fixa så CKEDITOR synkas STÄMMER MED textarea som tydligen måste finnas (se slack) --}} {{-- CDN To ckeditor --}} {{--
-        <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script> --}}
-
         <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="/assets/js/ckeditor.js"></script>
-        {{--<script src="//cdn.ckeditor.com/4.5.7/standard/ckeditor.js">< /script‌​>  --}}  
-          <script>
-                CKEDITOR.replace('article-ckeditor');
+
+        <script>
+            CKEDITOR.replace('article-ckeditor');
         </script>
 </body>
 
+{{-- @stack('scripts')
+{{!!  Html::scripts('js/hello.js') !!}}
+ --}}
 </html>

@@ -17,7 +17,7 @@
 
                 @foreach($archives as $stats)
                     <li>
-                        <a href="">{{ $stats['month'] }}</a>
+                        <a href="#">{{ $stats['month'] }}</a>
                     </li>
 
                 @endforeach

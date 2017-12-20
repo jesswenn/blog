@@ -6,40 +6,97 @@ HOME PAGE – grid, image
 NAV AND DROPDOWN HOME PAGE– 
 -------------------------------------------------- */
 .nav-wrapper {
-  overflow: hidden;
-  
-  li{
-    list-style: none;
-  }
-  
-  /* TO DO:::
-    On home page i want the nav to be fixed
-    but not on other pages
-   */
-  /*  position: fixed;*/
-    /*  top: 10%;*/
+overflow: hidden;
+
+li{
+list-style: none;
+}
+
+/* TO DO:::
+On home page i want the nav to be fixed
+but not on other pages
+*/
+/*  position: fixed;*/
+/*  top: 10%;*/
 }
 
 .nav-wrapper li a:hover {
-  background: rgba(192,192,192,0.3); 
-  padding-right: 200px;
-  color: $text-color-main;
-  -webkit-transition: all 0.4s ease;
-  text-decoration: none;
+background: rgba(192,192,192,0.3); 
+padding-right: 200px;
+color: $text-color-main;
+-webkit-transition: all 0.4s ease;
+text-decoration: none;
 }
 
 .nav-wrapper-home {
-  clear: left;
-  color: $text-color-links;
-  float: left;
-  font-size: 4em;
-  line-height: 1;
-  margin: 0 0 4px 0;
-  padding: 6px 12px;
-  margin-top: 50px;
-  margin: 4px;
-  text-transform: uppercase;
-  background-color: $text-color-main;
+clear: left;
+color: $text-color-links;
+float: left;
+font-size: 4em;
+line-height: 1;
+margin: 0 0 4px 0;
+padding: 6px 12px;
+margin-top: 50px;
+margin: 4px;
+text-transform: uppercase;
+background-color: $text-color-main;
+}
+
+.center {
+position: absolute;
+top: 30%;
+left: 80%;
+transform: translate(-50%, -50%);
+}
+
+
+.logo{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.logo li {
+  list-style: none;
+  color: #19d8a7;
+  font-size: 3em;
+  font-weight: lighter;
+  letter-spacing: 12px;
+}
+
+.logo:hover li {
+    cursor: pointer;
+  animation: animate 2s linear both;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    filter: blur(1px);
+  }
+
+  100% {
+    transform: rotate(45deg) translateY(-200px);
+    opacity :0;
+    filter: blur(20px);
+  }
+}
+
+.logo li:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.logo li:nth-child(2) {
+  animation-delay: .4s;
+}
+
+.logo li:nth-child(3) {
+  animation-delay: .8s;
+}
+
+.logo li:nth-child(4) {
+  animation-delay: 1.2s;
 }
 
 

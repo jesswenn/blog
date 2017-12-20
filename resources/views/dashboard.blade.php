@@ -12,6 +12,9 @@
             <div class="panel panel-default border">
                 <div class="panel-heading border-line">Dashboard</div>
                 <div class="panel-body">
+
+                    {{-- <a href="{{ route('sendEmail') }}" class="btn btn-primary">Send email</a> --}}
+
                     <a href="/posts/create" class="btn btn-primary">Create Post</a>
                     <h3>Your blog posts!</h3>
                     @if(count($posts) > 0)

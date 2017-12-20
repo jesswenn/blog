@@ -5,6 +5,11 @@
   ==========================================================--}}
   @extends('layouts.app')
   @section('content')
+
+<!-- 
+engloayqannan@hotmail.com
+https://www.facebook.com/Eng.Loayqannan
+-->
      {{-- <div class="row"> --}}
         {{-- <div class="col-md-8 col-md-offset-2"> --}}
 
@@ -52,9 +57,10 @@
       <img class="front-image" src={{asset('/upload_image/frank-mckenna-118431.jpg')}} alt="Image on boy"></a>
   </div>
 
-
-
 </div>
+
+
+
 </section>
 </div> {{-- END! Bootstrap Jumbotron --}}
 </div>{{-- END! container-fluid front-image --}}

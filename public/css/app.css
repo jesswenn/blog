@@ -8386,14 +8386,6 @@ button.close {
   }
 }
 
-/* Bulma */
-
-/* @import "node_modules/bulma/bulma";*/
-
-/* Bulma Vue models*/
-
-/* @import "node_modules/buefy/src/scss/buefy";*/
-
 /* Normalize*/
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -8889,10 +8881,6 @@ template {
 	Allt du vill skriva över i ett framework exempelvis Bootstrap
 	Skall du göra ditt custom css nedanför bootstrap under 
 ================================================================= */
-
-/*==============================
-	My custom SASS pages
-============================== */
 
 /* Helpers margins and paddings into html classes */
 
@@ -9450,7 +9438,7 @@ CONTACT PAGE – light box markup
 
 .contact-form {
   margin-bottom: 50px;
-  font-family: 'Scope One', serif;
+  font-family: "Scope One", serif;
 }
 
 .form-control {
@@ -9747,7 +9735,34 @@ Button
 /* FOOTER PAGE 
 -------------------------------------------------- */
 
-/* CMS /Manage  style */
+.footer-container {
+  height: 20vh;
+  width: 100%;
+  background-color: #444;
+}
 
-/*  @import "manage"; */
+.footer-text {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-text:hover {
+  cursor: pointer;
+  color: #19d8a7;
+}
+
+/* Footer */
+
+/* ALERT MESSAGE – colour
+-------------------------------------------------- */
+
+.alert-success {
+  color: #000;
+  background-color: #19d8a7;
+}
+
+.alert-danger {
+  color: #fff;
+  background-color: #e42d9f;
+}
 

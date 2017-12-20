@@ -7,8 +7,8 @@
 @section('content') 
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+    {{-- <div class="row"> --}}
+        <div class="row m-l-30">
 
         <a href="/posts" class="btn btn-default">Go back!</a> 
         <h1>{{$post->title}}</h1> 
@@ -45,9 +45,9 @@
 {{-- ========================================================================= 
         Show comments again?
 =============================================================================== --}} 
-        <div class="comments">
+{{--         <div class="comments">
             <ul class="list-group">
-                
+ --}}                
             
                 @foreach($post->comments as $comment)
                     <li class="list-group-item">
@@ -58,8 +58,8 @@
                     </li>
 
                 @endforeach
-            </ul>
-        </div>
+{{--             </ul>
+        </div> --}}
 
 
 

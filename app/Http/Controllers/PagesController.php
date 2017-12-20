@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 //Request library to make a request
 use Illuminate\Http\Request;
+use Mail;
+use App\Mail\newMail;
+use Auth;
 
 //Function inside of a class its call methodans
 // Public means that we can accses 
@@ -35,4 +38,13 @@ class PagesController extends Controller
     	$title = 'Contact us';
         return view ('pages.contact')->with('title', $title);
     }
+
+        // Email
+    //     public function email(){
+        
+    //     Mail::to(Auth::user()->email)->send(new newMail());
+    //     // send the email and redirect home
+    //     return redirect ('/dashboard');
+        
+    // }
 }

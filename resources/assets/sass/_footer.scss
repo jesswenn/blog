@@ -1,12 +1,17 @@
 /* FOOTER PAGE 
 -------------------------------------------------- */
-// .footer {
-// 	color: #fff;
-//   	min-height: 10vh;
-//   	width: 100%;
-//   	line-height: 60px; 
-//   	background-color: $text-color-main;
-//   	text-align:center; 
-// 	padding: 2em; 
-// 	margin-top: 1em;
-// }
+.footer-container{
+	height: 20vh;
+	width: 100%;
+	background-color: #444;
+
+}
+.footer-text{
+	text-decoration: none;
+	color: #fff;
+	
+	&:hover{
+		cursor: pointer;
+		color: $text-color-main;
+	}
+}
