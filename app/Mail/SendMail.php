@@ -32,7 +32,8 @@ class SendMail extends Mailable
      */
     public function build(request $request)
     {
-        Mail::to(Auth::user()->email)->send(new newMail());
+        // Mail::to(Auth::user()->email)->send(new newMail());
+        $user = user::find(1);
         //Whant to render out the message to our view, sending the message data
         return $this->view('mail', ['name' => $user->name])->to($user->email);
     }

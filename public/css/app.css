@@ -9518,12 +9518,39 @@ HOME PAGE – grid, image
 NAV AND DROPDOWN HOME PAGE– 
 -------------------------------------------------- */
 
+.red .color-hover {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, green));
+  background-image: linear-gradient(to right, transparent 50%, green 50%);
+}
+
+.color-hover {
+  text-decoration: none;
+  background-position: 0;
+  background-size: 200%;
+  -webkit-transition: all 0.4s;
+  -webkit-transition: background-position 0.4s, color 0.7s;
+  transition: background-position 0.4s, color 0.7s;
+}
+
+.color-hover:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/*---------------------------------------------*/
+
 .nav-wrapper {
   overflow: hidden;
+  text-decoration: none;
+  background-position: 0;
+  background-size: 200%;
+  -webkit-transition: all 0.4s;
+  -webkit-transition: background-position 0.4s, color 0.7s;
+  transition: background-position 0.4s, color 0.7s;
   /* TO DO:::
-    On home page i want the nav to be fixed
-    but not on other pages
-   */
+On home page i want the nav to be fixed
+but not on other pages
+*/
   /*  position: fixed;*/
   /*  top: 10%;*/
 }
@@ -9555,6 +9582,106 @@ NAV AND DROPDOWN HOME PAGE–
   text-transform: uppercase;
   background-color: #19d8a7;
 }
+
+.nav-wrapper-home:hover,
+.nav-wrapper-auth:hover,
+.dropdown:hover {
+  color: white;
+  text-decoration: none;
+  background-position: -100% !important;
+}
+
+/*
+LOGO 
+-------------------------------------------------- */
+
+.center {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo li {
+  list-style: none;
+  color: #19d8a7;
+  font-size: 3em;
+  font-weight: lighter;
+  letter-spacing: 12px;
+}
+
+.logo:hover li {
+  cursor: pointer;
+  -webkit-animation: animate 2s linear both;
+          animation: animate 2s linear both;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(0px);
+            transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+
+  100% {
+    -webkit-transform: rotate(45deg) translateY(-200px);
+            transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(0px);
+            transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+
+  100% {
+    -webkit-transform: rotate(45deg) translateY(-200px);
+            transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+  }
+}
+
+.logo li:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.logo li:nth-child(2) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.logo li:nth-child(3) {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+.logo li:nth-child(4) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+/* Create post page */
 
 /* Image grid*/
 
@@ -9616,7 +9743,6 @@ Images and css grid
 }
 
 .b {
-  background-color: #19d8a7;
   grid-column: 3;
   grid-row: 1 / span 2;
 }

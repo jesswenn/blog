@@ -20,6 +20,7 @@ Images and css grid
         cursor: pointer;
         -webkit-filter: blur(2px);
         filter: blur(2px);
+
     }
 }
 
@@ -31,7 +32,7 @@ Images and css grid
       display: grid;
       /*display: flex; *//* Stack on row */
       grid-gap: 10px;
-      grid-template-columns: 300px 300px 500px;
+      grid-template-columns: 300px 300px 500px ;
       padding-bottom: 50px;
       display: grid;
       /* Display as a Grid */
@@ -57,7 +58,6 @@ Images and css grid
       }
 
       .b {
-        background-color: $text-color-main;
 	      grid-column: 3;
 	      grid-row: 1 / span 2;
           

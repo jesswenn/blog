@@ -43,11 +43,13 @@
             <ul class="nav-wrapper">
                 <li><a class="nav-wrapper-home" href="/">Home</a></li>
                 <li><a class="nav-wrapper-home" href="/about">About</a></li>
-                <li><a class="nav-wrapper-home" href="/posts">Blog</a></li>
+                <li><a class="nav-wrapper-home" href="/posts">Gallery</a></li>
                 <li><a class="nav-wrapper-home" href="/contact">Contact</a></li>
             </ul>
 
        
+            {{-- TO DO...
+                MAke the logo work in SCSS file???? --}}
                 <style>
 
                     .center {

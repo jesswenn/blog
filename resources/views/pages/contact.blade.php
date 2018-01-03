@@ -30,13 +30,13 @@
     Send mail form
 
 ==========================================================--}} 
-<div class="col-md-6 m-t-75">
+{{-- <div class="col-md-6 m-t-75">
     <h1>Send mail</h1>
     <form action="send" method="POST">
         {{ csrf_field() }}
         to: <input type="text" name="to">
         message: <textarea name="msg" cols="30" rows="10"></textarea>
         <input type="submit" value="Send">
-    </form>
+    </form> --}}
     
 @endsection

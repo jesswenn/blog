@@ -5,11 +5,34 @@ HOME PAGE – grid, image
 /* 
 NAV AND DROPDOWN HOME PAGE– 
 -------------------------------------------------- */
-.nav-wrapper {
-overflow: hidden;
+.red .color-hover{
+background-image: linear-gradient(to right, transparent 50%, green 50%);
+}
 
-li{
-list-style: none;
+.color-hover {
+    text-decoration: none;
+    background-position: 0;
+    background-size: 200%;
+    -webkit-transition: all 0.4s;
+  transition: background-position 0.4s, color 0.7s;
+}
+
+.color-hover:hover {
+    color:white;
+    text-decoration: none;
+}
+
+/*---------------------------------------------*/
+.nav-wrapper {
+    overflow: hidden;
+    text-decoration: none;
+    background-position: 0;
+    background-size: 200%;
+    -webkit-transition: all 0.4s;
+    transition: background-position 0.4s, color 0.7s;
+    
+    li {
+    list-style: none;
 }
 
 /* TO DO:::
@@ -21,32 +44,42 @@ but not on other pages
 }
 
 .nav-wrapper li a:hover {
-background: rgba(192,192,192,0.3); 
-padding-right: 200px;
-color: $text-color-main;
--webkit-transition: all 0.4s ease;
-text-decoration: none;
+  background: rgba(192,192,192,0.3); 
+  padding-right: 200px;
+  color: $text-color-main;
+  -webkit-transition: all 0.4s ease;
+  text-decoration: none;
 }
 
 .nav-wrapper-home {
-clear: left;
-color: $text-color-links;
-float: left;
-font-size: 4em;
-line-height: 1;
-margin: 0 0 4px 0;
-padding: 6px 12px;
-margin-top: 50px;
-margin: 4px;
-text-transform: uppercase;
-background-color: $text-color-main;
+  clear: left;
+  color: $text-color-links;
+  float: left;
+  font-size: 4em;
+  line-height: 1;
+  margin: 0 0 4px 0;
+  padding: 6px 12px;
+  margin-top: 50px;
+  margin: 4px;
+  text-transform: uppercase;
+  background-color: $text-color-main;
 }
 
+.nav-wrapper-home:hover{
+        color:white;
+    text-decoration: none;
+   background-position: -100% !important;
+}
+
+
+/*
+LOGO 
+-------------------------------------------------- */
 .center {
-position: absolute;
-top: 30%;
-left: 80%;
-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
 }
 
 

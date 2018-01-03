@@ -16,7 +16,8 @@ class MailController extends Controller
 
     	public function email()
 	{
-		// Mail::to(Auth::user()->email)->send(new newMail() );
+		
+	Mail::to(Auth::user()->email)->send(new newMail() );
 	    return view('email');
     }
 }
