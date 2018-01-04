@@ -14,7 +14,9 @@
         <h1>{{$post->title}}</h1> 
         <small class="author-written">Written on{{ $post->created_at->toFormattedDateString() }} by {{$post->user->name}}</small> 
         {{-- <hr> --}} 
-        <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}" alt="Image"> 
+
+        {{-- <img src="{{ asset ('cover_images/' . $post->cover_image ) }}" width='800' height="400"> --}}
+        <img style="width:100%" src="/storage/cover_images/{{ $post->cover_image }}" alt="Image"> 
         <div> 
             <p>{!!$post->body!!}</p> 
         </div> 

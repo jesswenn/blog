@@ -35,3 +35,51 @@ ngrok http 8080
 
 ///////////////////////////////////////////////////////////////////
 which nginx
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////
+
+	//TO DO Ask JAcob
+
+///////////////////////////////////////////////////////////////////
+
+1.SCC filer smartaste sättet samt media Queries?
+-Mixin för media querises
+Länk Jacob
+
+
+
+2. Smartaste sättet optimera bilder i Laravel?
+Länk Jacob
+
+
+
+3. asyncron laddning?
+Ok
+
+
+
+4. retina skärm (se slack Anna exempel)?
+Länk Jacob
+
+
+
+5. profilimage hur gör så den kommer med på alla sidor?
+
+
+
+6. Laravel allmänt finns ingen javascript?
+
+
+
+
+
+
+
+

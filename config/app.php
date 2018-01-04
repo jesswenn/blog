@@ -182,11 +182,6 @@ return [
 
         // Intervention image package
         Intervention\Image\ImageServiceProvider::class,
-
-    
-     
-
-
     ],
 
     /*
@@ -241,7 +236,6 @@ return [
         // Intervention image package
         // We can use image as a shorthand for the class
         'Image' => Intervention\Image\Facades\Image::class,
-
 
     ],
 

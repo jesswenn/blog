@@ -11,9 +11,6 @@
 
         <div class="col-md-8 col-md-offset-2">
 
-            {{--
-            <div class="row"> --}} {{--
-                <div class="container-fluid "> --}}
                     <div class="well ">
                         <div class="group ">
                             <img class="img-fileUpload" src="/upload_image/avatars/{{ $user->avatar }}" alt="Profile image of user">

@@ -5,12 +5,9 @@
 
 ========================================================--}}
 @extends('layouts.app')
-
 @section('content')
 
-    <div class="row m-l-30">
-    <div class="col-sm-8 blog-main">
-	
+    <div class="row m-l-30">	
 	<h1>Edit post<h1>
 
 	{{-- PostController --}}

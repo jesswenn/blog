@@ -23,7 +23,7 @@
                 {{Form::textarea('body','', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body text'])}} 
             </div> 
              
-            {{-- Here we upload image --}} 
+            {{-- Here we upload ourimage --}} 
             <div class="form-group m-l-30"> 
                 {{Form::file('cover_image')}} 
             </div> 

@@ -33,18 +33,18 @@ class PagesController extends Controller
     public function contact(){
         // $data = array(
         //     'title' => 'services',
-        //     'services' => ['Webdesign', 'Frontend', 'SEO']
+        //     'services' => ['Design', 'Portfolio, 'Gallery']
         // );
     	$title = 'Contact us';
         return view ('pages.contact')->with('title', $title);
     }
 
         // Email
-    //     public function email(){
+        public function email(){
         
-    //     Mail::to(Auth::user()->email)->send(new newMail());
-    //     // send the email and redirect home
-    //     return redirect ('/dashboard');
+        Mail::to(Auth::user()->email)->send(new newMail());
+        // send the email and redirect home
+        return redirect ('/dashboard');
         
-    // }
+    }
 }

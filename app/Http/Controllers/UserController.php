@@ -146,7 +146,7 @@ class UserController extends Controller
 
         $user = Auth::user();
         $user->avatar = $filename;
-        // $user ->save();
+        // $user->save();
       }
 
       return view ('profile', array('user' =>Auth::user()));

@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 // Bringing linking the Model here
 use App\Post;
+// use Image;
 // use DB;
 class PostsController extends Controller
 {
@@ -83,24 +84,31 @@ class PostsController extends Controller
         ]);
 
 
-        // HAndle file uppload
+        // HAndle file uppload save our image
         // If request click choose file
         // if the user didnt use the default image
         if ($request->hasFile('cover_image')) {
             
             // Get filename with extension
             $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+            
             //Get just filename
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            
             //Get just ext
             $extension = $request->file('cover_image')->getClientOriginalExtension();
+            
             //File to store
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            
             //Upload image
             // IImage store to storage/app/public image
             // MAke a simlink so it can store in the public folder
             // run: php artisan storage:link
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+            // Image::make($fileNameToStore)->resize(800, 400)->save($path);
+
+            // $post->cover_image = $extension;
         
         //If user dont upload image the default image take place 
         }else{ 

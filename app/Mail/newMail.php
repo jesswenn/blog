@@ -32,6 +32,6 @@ class newMail extends Mailable
         // Write view instead of markdown 
         // it will render your HTML instead of Laravel built in markdown
 
-        return $this->markdown('email')->to('jessica@none.se');
+        return $this->markdown('email')->to('jessica.wennberg@medieinstitutet.se');
     }
 }

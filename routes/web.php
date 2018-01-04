@@ -48,10 +48,6 @@ Route::post('/posts/{post}/comments', 'CommentsController@store');
 
 
 
-
-
-
-
 // Route::get('foo', function() {
 //     $image = Image::make('http://placehold.it/500x500/000/e8117f');
 //     return Response::make($image->encode('jpg'), 200, ['Content-Type' => 'image/jpeg']);
