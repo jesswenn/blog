@@ -1,5 +1,14 @@
-$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 85, 95, 100); // Adjust this to include the pixel amounts you need.
-$sides: (top, bottom, left, right); // Leave this variable alone
+/* -------------------------------------------------- 
+  	
+  	MARGIN AND PADDING HELPERS
+  	Adjust this to include the 	
+  	pixel amounts you need in your HTML classes
+  	
+  	(Leave this variable alone)
+  	
+-------------------------------------------------- */
+$spaceamounts: (5, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 55, 70, 75, 80, 85, 90, 95, 100, 110, 120, 130); 
+$sides: (top, bottom, left, right);
 
 @each $space in $spaceamounts {
   @each $side in $sides {

@@ -44,16 +44,17 @@
 
             @yield('content')
 
+
         </div> {{-- END row --}} 
     </div> {{-- END container--}}                          
     @include('layouts.footer')
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
-        <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="/assets/js/ckeditor.js"></script>
-
+        {{-- <script src="/assets/js/ckeditor.js"></script> --}}
+        
+        <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
         <script>
             CKEDITOR.replace('article-ckeditor');
         </script>

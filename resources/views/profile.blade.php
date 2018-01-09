@@ -7,12 +7,12 @@
 @section('content')
 
 <div class="nav-container">
-    <div class="row m-l-30">
+    {{-- <div class="row m-l-30"> --}}
 
         <div class="col-md-8 col-md-offset-2">
 
                     <div class="well ">
-                        <div class="group ">
+                        <div class="group">
                             <img class="img-fileUpload" src="/upload_image/avatars/{{ $user->avatar }}" alt="Profile image of user">
                             <h2>{{ $user->name }} 'Profile'</h2>
 

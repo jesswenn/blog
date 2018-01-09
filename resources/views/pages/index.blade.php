@@ -25,41 +25,112 @@ https://www.facebook.com/Eng.Loayqannan
      </div>
  </section> --}}
 
- <div class="wrapper">
-   {{-- <h1>Olle!</h1> --}}
-   <div class="box a">
-      <img class="front-image" src={{asset('/upload_image/frank-mckenna-118431.jpg')}} alt="Image on boy"></a>
-  </div>
+<section class="section">
+ <div class="grid-container ">
+    <div class="item">
+      <div class="item__details">
+        Muffin jelly gingerbread 
 
-  {{-- <h1>Axel!</h1>--}}
-  <div class=" box b">
-{{--     <h1 class="box-b-text m-l-30 m-t-30">Arkiv ? ...</h1>
-    <p class="box-b-text m-l-30 m-t-30 m-r-30">Lorem ipsum dolor amet master cleanse tacos offal kickstarter asymmetrical pok pok. Edison bulb migas slow-carb mlkshk ramps XOXO. Activated charcoal austin poke prism palo santo, green juice intelligentsia church-key migas chillwave readymade.<br> 
-      <br>IPhone listicle lo-fi fixie. Brooklyn cardigan vinyl williamsburg. Woke glossier hot chicken, cray next level af lo-fi vegan mixtape tbh man bun fashion axe semiotics.</p> --}}
-      <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a>
+       {{--    <img class="front-image" 
+          srcet={{asset('/upload_image/frank-mckenna-118431.jpg')}} 
+          {{asset('/upload_image/imgRetina2x_frank-mckenna-118431.jpg 2x,')}} 
+          {{asset('/upload_image/imgRetina3x_frank-mckenna-118431.jpg 3x,')}} 
+          
+          src={{asset('/upload_image/frank-mckenna-118431.jpg')}} 
+          alt="Image on boy"> --}}
+        {{-- </a> --}}
+     </div>{{-- END Item__details--}} 
+    </div>
+
+    
+
+    <div class="item item--large">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
   </div>
 
   {{-- <h1>Måns!</h1>--}}
-  <div class="box c">
-      <img class="front-image" src={{asset('/upload_image/jordan-whitt-54480.jpg')}} alt="Image on boy"></a>
+    <div class="item item--medium">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/jordan-whitt-54480.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
   </div>
 
   {{-- <h1>Övriga bilder!</h1>--}}
-  <div class="box d">
-      <img class="front-image" src={{asset('/upload_image/annie-spratt-54459.jpg')}} alt="Image on boy"></a>
+    <div class="item item--large">
+      <div class="item__details">
+        {{-- <img class="front-image" src={{asset('/upload_image/nick-karvounis-75432.jpg')}}  alt="Image on boy"></a> --}}
+    </div>
+  </div>{{-- END Item__details--}}
+
+
+
+    <div class="item item--full">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
   </div>
 
-  <div class="box e">
-      <img class="front-image" src={{asset('/upload_image/nick-karvounis-75432.jpg')}} alt="Image on boy"></a>
+    <div class="item item--medium">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
   </div>
 
-   <div class="box f">
-      <img class="front-image" src={{asset('/upload_image/frank-mckenna-118431.jpg')}} alt="Image on boy"></a>
+     <div class="item item--large">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
   </div>
 
-</div>
+    <div class="item">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
+  </div>
 
+    <div class="item item--medium">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
+  </div>
 
+    <div class="item item--large">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
+  </div>
+
+    <div class="item">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
+  </div>
+
+    <div class="item item--medium">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
+  </div>
+
+    <div class="item item--medium">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
+  </div>
+
+    <div class="item item--large">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
+  </div>
+
+  <div class="item">
+      <div class="item__details">
+      {{-- <img class="front-image" src={{asset('/upload_image/annie-spratt-66432.jpg')}} alt="Image on boy"></a> --}}
+      </div>{{-- END Item__details--}}
+  </div>
 
 </section>
 </div> {{-- END! Bootstrap Jumbotron --}}

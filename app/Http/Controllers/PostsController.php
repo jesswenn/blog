@@ -178,7 +178,7 @@ class PostsController extends Controller
         ]);
 
         //HAndle file uppload
-        // If request clickchoose file
+        // If request click choose file
         // if they didnt use the default image
         if ($request->hasFile('cover_image')) {
             
@@ -190,8 +190,8 @@ class PostsController extends Controller
             $extension = $request->file('cover_image')->getClientOriginalExtension();
             //File to store
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
-            //Upload image
-            // IImage store to storage/app/publicber image
+            // Upload image
+            // Image store to storage/app/publicber image
             // MAke a simlink so it can store in the public folder
             // run: php artisan storage:link
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);

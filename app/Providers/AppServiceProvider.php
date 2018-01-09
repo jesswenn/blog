@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //Use Shema if get error in terminal for lenght
-        // Schema::defaultStringLenght(191);
+//        Schema::defaultStringLenght(191);
     }
 
     /**

@@ -13,7 +13,7 @@
     <h1>Create post</h1> 
 
         {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!} 
-            <div class="form-group m-l-30"> 
+            <div class="form-group m-l-30 "> 
                 {{Form::label('title', 'Title')}} 
                 {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}} 
             </div> 

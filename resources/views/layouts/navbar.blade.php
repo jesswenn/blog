@@ -10,7 +10,7 @@
 
     <div class="row">
      <div class="center">
-      <div class="logo">
+      <div class="logo ">
         <li>#</li>
         <li>m</li>
         <li>y</li>
@@ -22,25 +22,16 @@
       </div>
     </div>
 
-        
-        <!-- Branding Image / Maybe a logo here? Instead of Album name? -->
-        {{-- <div class="navbar-header"> --}}
-
             <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+{{--             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-            <!-- Branding Image / Maybe a logo here? Instead of Album name? -->
-     {{--        <a class="navbar-brand" href="{{ url('/') }}">
-            </a>
-        </div> --}}
-
+ --}}
             <!-- Navbar -->
-            <ul class="nav-wrapper">
+            <ul class="nav-wrapper m-l-10 m-t-20">
                 <li><a class="nav-wrapper-home" href="/">Home</a></li>
                 <li><a class="nav-wrapper-home" href="/about">About</a></li>
                 <li><a class="nav-wrapper-home" href="/posts">Gallery</a></li>
@@ -112,7 +103,7 @@
                 </style>
 
                 <!-- Right Side Of Navbar Login and Register links-->
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right m-r-12 m-t-10 m-b-40">
 
                     <!-- Authentication Links -->
                     @if(Auth::guest())

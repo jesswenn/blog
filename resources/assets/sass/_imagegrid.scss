@@ -1,87 +1,136 @@
 /* 
-Images and css grid
+Images and CSS grid
 -------------------------------------------------- */
 .front-image{
    /* Full height */
-  width: 100%;
-  height:100%;
-  height:calc(100% - 1px);
-  padding-left: 0 auto;
-  padding-right: 0 auto;
-  margin: 0;
-   // border: 4px solid red;
+    width: 100%;
+    height:100%;
+    height:calc(100% - 1px);
+    padding-left: 0 auto;
+    padding-right: 0 auto;
+    margin: 0;
+    /*border: 4px solid red;*/
 
     /* Center and scale the image */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     
+    /* Hover blur effect on images */
     &:hover{
         cursor: pointer;
         -webkit-filter: blur(2px);
         filter: blur(2px);
-
     }
 }
 
-.box e {
- 	/*background-color: #fff;*/
- }
-
-.wrapper {
-      display: grid;
-      /*display: flex; *//* Stack on row */
-      grid-gap: 10px;
-      grid-template-columns: 300px 300px 500px ;
-      padding-bottom: 50px;
-      display: grid;
-      /* Display as a Grid */
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-     /* 
-     repeat = as many times as you can fit 
-     auto-fit = fit as many items on the line as possible, go bigger if you need to 
-   	minmax = (min size, max size) = the minimum size the column 
-     should be is 200px, but if there's space then give them all 1fr of that width. 
-	*/
+.section {
+  display: none;
+  padding: 2rem;
+  
+  @media screen and (min-width: 768px) {
+    padding: 4rem;
+  }
+  
+  @supports(display: grid) {
+    display: block;
+  }
 }
 
-.box {
-      /*background-color: #444;*/
-      color: #fff;
-      // border-radius: 5px;
-      /*padding: 10px;*/
-      /*font-size: 150%;*/
-      }
+.grid-container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: row dense;
+}
 
-      .a {
-      	grid-column: 1 / span 2;
-      }
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  background: #0c9a9a;
+  color: #fff;
+  grid-column-start: auto;
+  grid-row-start: auto;
+  color: #fff;
+  background:  url('/upload_image/frank-mckenna-118431.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: -2px 2px 10px 0px rgba(#444, 0.4);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  counter-increment: item-counter;
+  
+  &:nth-of-type(3n) {
+    background-image: url('/upload_image/frank-mckenna-118431.jpg');
+  }
+  
+  &:nth-of-type(4n) {
+    background-image: url('/upload_image/nick-karvounis-75432.jpg');
+  }
+  
+  &:nth-of-type(5n) {
+    background-image: url('/upload_image/annie-spratt-66432.jpg');
+  }
+  
+  &:nth-of-type(6n) {
+    background-image: url('/upload_image/jordan-whitt-54480.jpg');
+  }
 
-      .b {
-	      grid-column: 3;
-	      grid-row: 1 / span 2;
-          
-          .box-b-text{
-            color: #000;
-          }
-      }
-
-
-      .c {
-	      grid-column: 1 ;
-	      grid-row: 2 ;
-      }
-
-      .d {
-	      grid-column: 2 ;
-	      grid-row: 2 ;
-      }
-
-      .e {
-      	grid-column: 1 / span 3;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  &:hover {
+    transform: scale(1.05);
+    
+    &:after {
+      opacity: 0;
     }
+  }
 
-       .f {
-        grid-column: 1 / span 3;
+  &--medium {
+    grid-row-end: span 2;
+  }
+
+  &--large {
+    grid-row-end: span 3;
+  }
+
+  &--full {
+    grid-column-end: auto;
+
+    @media screen and (min-width: 768px) {
+      grid-column: 1/-1;
+      grid-row-end: span 2;
     }
-
+  }
+  
+  &__details {
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    color: #444;
+    background: #fff;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    color: #828282;
+    
+    &:before {
+      content: counter(item-counter);
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding-right: 0.5em;
+      color: #444;
+    }
+  }
+}

@@ -30,18 +30,22 @@
         Link to every single post when click on it whit the post id 
 ==================================================================================== --}}   
 
-                 <div class="col-md-8 col-sm-8">
-                   <h3><a class="single-post" href="/posts/{{ $post->id }}">{{ $post->title }}</a></h3>
-                    <small class="author-written">Written on{{ $post->created_at->toFormattedDateString() }} by {{$post->user->name}}</small>
-                </div>
+ <div class="col-md-8 col-sm-8">
+   <h3><a class="single-post" href="/posts/{{ $post->id }}">{{ $post->title }}</a></h3>
+    <small class="author-written">Written on {{ $post->created_at->toFormattedDateString() }} by {{$post->user->name}}</small>
+</div>
 
 
     </div>{{-- END well class --}}
 @endforeach
 
-    {{-- HERE WE PAGINATES THE PAGES --}}
-    {{ $posts->links() }}
+{{-- HERE WE PAGINATES THE PAGES --}}
+    <div class="pagination">
+        {{ $posts->links() }}
+    </div>
+
+
     @else
         <p>No post found!</p>
     @endif
-@endsection
+   @endsection

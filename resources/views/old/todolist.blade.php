@@ -78,8 +78,26 @@ Länk Jacob
 
 
 
+//////////////////////////////////////////
+
+	TO DO FRÅGA JACOB MARTIN
+
+	FUNGERAR INTE ATT HOSTA UPP PÅ BINERO
+	FÅR FEL
+	Parse error: syntax error, unexpected '?' in /storage/content/75/219675/jesswenn71.se/examination/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 233
+
+	SVAR JAG HITTADE KÖRA DETTA UPPDATERA PHP 7
+	Jg har -v 7 
+	Men att den kanske kör PHP 5.6 eller läggre öndå?
+
+	Se svar nedan sudo command:
+--------------------------------------------------------------
+		sudo a2dismod php5
+		sudo a2enmod php7.0
+		sudo service apache2 restart
 
 
+//////////////////////////////////////////
 
 
 
