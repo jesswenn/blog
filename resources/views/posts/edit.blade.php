@@ -8,17 +8,27 @@
 @section('content')
 
     <div class="row m-l-30">	
-	<h1>Edit post<h1>
+    	<a href="/posts" class="btn btn-default">Tillbaka</a>
+	<h1><h1>
+		
+	{{-- =====================================================
+	    TO DO! 
+	    2018-02-20
+	    Make an arrow to show to go back
+	    Nicer simple and clean
+	========================================================--}}
+	  {{-- <a href="/dashboard">
+	  <i class="fa fa-arrow-left" aria-hidden="true"></i></a> --}}
 
 	{{-- PostController --}}
 	{!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 	<div class="form-group">
-		{{Form::label('title', 'Title')}}
+		{{Form::label('title', 'Redigera inlägg')}}
 		{{Form::text('title', $post->title, ['class' => 'form-control', 'placeholder' => 'Title'])}}
 	</div>
 
 	<div class="form-group">
-		{{Form::label('body', 'Body')}}
+		{{Form::label('', '')}}
 		{{Form::textarea('body', $post->body, ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body text'])}}
 	</div>
 
@@ -30,6 +40,6 @@
 	</div>
 
 	{{Form::hidden('_method', 'PUT')}}
-	{{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+	<div class="m-t-30"> {{Form::submit('Skicka', ['class' => 'btn btn-primary'])}} </div>
 	{!! Form::close() !!}
 @endsection

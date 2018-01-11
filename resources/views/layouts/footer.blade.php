@@ -1,23 +1,32 @@
 {{-- =====================================================
 
-    Here we view our footer
+    Footer
 
 ========================================================--}}
 
 <footer>	
 	<div class="footer-container">
 		
-		<div class="row">
+		{{-- <div class="row"> --}}
 		    		
-			<p class="footer-text m-l-110 m-t-20 ">
-				<a class="footer-text " href="#">Back to top</a>
-				<i class="footer-text fa fa-heart" aria-hidden="true"> Made with love in Stockholm 2017</i>
+			<div class="wrapper">
+				<a class="item1" href="#">Back to top</a>
 
-			</p>
+	
+					<i class="fa fa-heart" aria-hidden="true"></i></a>
+			
+			</div>
+
+
+		
+
+
+				{{-- =====================================================
+					TO DO
+					The font dosent show correct 
+				========================================================--}}
 
 		</div>{{-- END row --}}
 	</div>{{-- END container --}}
 </footer>
-
-
 

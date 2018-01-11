@@ -10100,14 +10100,11 @@ Images and CSS grid
   padding: 15px;
   color: #444;
   background: #fff;
-  text-transform: lowercase;
   letter-spacing: 1px;
   color: #828282;
 }
 
 .item__details:before {
-  content: counter(item-counter);
-  font-weight: bold;
   font-size: 1.1rem;
   padding-right: 0.5em;
   color: #444;
@@ -10206,20 +10203,33 @@ Button
 	FOOTER PAGE 
 -------------------------------------------------- */
 
-.footer-container {
-  height: 20vh;
-  width: 100%;
+.wrapper {
+  display: grid;
   background-color: #3e3a47;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 100px;
+  grid-template-areas: ". a a ." ". a a .";
 }
 
-.footer-text {
+.item1,
+.fa-heart {
+  grid-area: a;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
   color: #fff;
 }
 
-.footer-text:hover {
+.item1:hover,
+.fa-heart:hover {
   text-decoration: none;
   cursor: pointer;
   color: #19d8a7;
+}
+
+.fa-heart {
+  margin-bottom: 50px;
 }
 
 /* Footer */
@@ -10240,8 +10250,8 @@ Button
 /* mediaqueries */
 
 /* -------------------------------------------------- 
-
-	ALL MEDIAQUERIES
+                ALL MEDIAQUERIES
+                
   	Device = Desktops
   	Screen = 1281px to higher resolution desktops
   
@@ -10276,10 +10286,6 @@ Button
     background-color: #3e3a47;
     min-width: 100%;
   }
-
-  .btn {
-    margin-right: 40px;
-  }
 }
 
 /* -------------------------------------------------- 
@@ -10290,6 +10296,13 @@ Button
 @media (min-width: 320px) and (max-width: 480px) {
   .logo > li {
     display: none;
+  }
+
+  .btn {
+    font-size: 1em;
+    padding-right: 0px;
+    padding-left: 10px;
+    width: 95px;
   }
 }
 

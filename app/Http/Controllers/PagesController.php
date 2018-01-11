@@ -16,7 +16,7 @@ class PagesController extends Controller
 	
 	// Links the index page
     public function index(){
-        $title = '#my Album';
+        $title = '#mitt galleri';
          return view ('pages.index')->with('title', $title);
     	// return view ('pages.index', compact('title'));
 
@@ -24,7 +24,7 @@ class PagesController extends Controller
 
     // Links the about page
     public function about(){
-         $title = 'About my album!';
+         $title = 'Om mitt galleri!';
          return view ('pages.about')->with('title', $title);
     	
     }
@@ -35,7 +35,7 @@ class PagesController extends Controller
         //     'title' => 'services',
         //     'services' => ['Design', 'Portfolio, 'Gallery']
         // );
-    	$title = 'Contact us';
+    	$title = 'Kontakta oss gärna';
         return view ('pages.contact')->with('title', $title);
     }
 

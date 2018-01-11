@@ -10,7 +10,7 @@
     <div class="row ">
         {{-- <div class="row m-l-30"> --}}
 
-        <a href="/posts" class="btn btn-default">Go back!</a> 
+        <a href="/posts" class="btn btn-default">Hem</a> 
         <h1>{{$post->title}}</h1> 
         <small class="author-written">Written on{{ $post->created_at->toFormattedDateString() }} by {{$post->user->name}}</small> 
         {{-- <hr> --}} 
@@ -24,7 +24,7 @@
 
             @if(!Auth::guest()) 
             @if(Auth::user()->id == $post->user_id) 
-            <a href="/posts/{{$post->id}}/edit" class="btn btn-default ">Edit</a> 
+            <a href="/posts/{{$post->id}}/edit" class="btn btn-default ">Redigera</a> 
             <div class="comments "> 
 
                 <ul class="list-group"> 
