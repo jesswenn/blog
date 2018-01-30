@@ -1,24 +1,23 @@
 {{-- =====================================================
-
 		Edit page – here we edit our single
 		post via our dashboard
-
 ========================================================--}}
 @extends('layouts.app')
 @section('content')
 
-    <div class="row m-l-30">	
+<div class="container ">
+    <div class="row">
     	<a href="/posts" class="btn btn-default">Tillbaka</a>
 	<h1><h1>
 		
-	{{-- =====================================================
+{{-- =====================================================
 	    TO DO! 
 	    2018-02-20
 	    Make an arrow to show to go back
 	    Nicer simple and clean
-	========================================================--}}
-	  {{-- <a href="/dashboard">
-	  <i class="fa fa-arrow-left" aria-hidden="true"></i></a> --}}
+========================================================--}}
+	{{-- <a href="/dashboard">
+	<i class="fa fa-arrow-left" aria-hidden="true"></i></a> --}}
 
 	{{-- PostController --}}
 	{!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}

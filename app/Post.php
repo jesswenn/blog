@@ -8,7 +8,8 @@ class Post extends Model
    
     public function comments()
     {
-        // One post can have many commnets here we specify and returns this
+        // One post can have many commnets
+        // here we specify and returns this
         return $this->hasMany(Comment::class);
     }
 
@@ -29,7 +30,7 @@ class Post extends Model
             $query->whereMonth('created_at', Carbon::parse($month)->month);
         }
 
-        // same request for the year
+        // The same request for the year
         if($year = $filters['year']) {
             $query->whereYear('created_at', $year);
         }
@@ -46,7 +47,7 @@ class Post extends Model
        
    }
 
-    // Static Archives method?
+    // Archives method
     // thats returns our query
     public static function archives()
     {

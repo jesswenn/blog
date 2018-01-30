@@ -3,10 +3,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 // Laravel library (in documantation)
 use Illuminate\Support\Facades\Storage;
+
 // Bringing linking the Model here
 use App\Post;
-// use Image;
-// use DB;
+use DB;
+
 class PostsController extends Controller
 {
     /**
@@ -84,7 +85,7 @@ class PostsController extends Controller
         ]);
 
 
-        // HAndle file uppload save our image
+        // Handle file uppload save our image
         // If request click choose file
         // if the user didnt use the default image
         if ($request->hasFile('cover_image')) {
@@ -98,10 +99,10 @@ class PostsController extends Controller
             //Get just ext
             $extension = $request->file('cover_image')->getClientOriginalExtension();
             
-            //File to store
+            //Filename to store
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
             
-            //Upload image
+            // Upload the image here
             // IImage store to storage/app/public image
             // MAke a simlink so it can store in the public folder
             // run: php artisan storage:link
@@ -226,8 +227,8 @@ class PostsController extends Controller
         }
         // We dont want the no image to dissapear when deleting an image with post
         // If someone uploads an post without a image
-        //
         if ($post->cover_image != 'noimage.jpg') {
+            
             //Delete image
             Storage::delete('/public/cover_images/'.$post->cover_image);
         }

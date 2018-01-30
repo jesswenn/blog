@@ -30,6 +30,8 @@
 
 /* Panels*/
 
+/* Mixins */
+
 /* Font-Awesome*/
 
 /*@import "node_modules/font-awesome/scss/font-awesome";*/
@@ -9665,7 +9667,6 @@ About page – box
 
 .about-box {
   min-height: 10vh;
-  margin-top: 300px;
   color: #000;
   background-color: #fff;
   -webkit-transform: translateY(-100%);
@@ -9947,12 +9948,6 @@ LOGO
 /* -------------------------------------------------- 
 	#myalbum logo 
 -------------------------------------------------- */
-
-.logo > li {
-  display: grid;
-  grid-template-columns: 1fr;
-  font-size: 1rem;
-}
 
 /* Image grid*/
 
@@ -10286,6 +10281,11 @@ Button
     background-color: #3e3a47;
     min-width: 100%;
   }
+
+  .nav-wrapper-auth,
+  .dropdown {
+    margin-left: 30px;
+  }
 }
 
 /* -------------------------------------------------- 
@@ -10294,6 +10294,11 @@ Button
 -------------------------------------------------- */
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .nav-wrapper-auth,
+  .dropdown {
+    margin-left: 30px;
+  }
+
   .logo > li {
     display: none;
   }
@@ -10302,7 +10307,7 @@ Button
     font-size: 1em;
     padding-right: 0px;
     padding-left: 10px;
-    width: 95px;
+    width: 100%;
   }
 }
 

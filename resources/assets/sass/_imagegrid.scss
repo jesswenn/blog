@@ -2,6 +2,7 @@
 Images and CSS grid
 -------------------------------------------------- */
 .front-image{
+   // @include imgRetina(front-image, png, 100px, 40px);
    /* Full height */
     width: 100%;
     height:100%;

@@ -40,13 +40,12 @@ class CommentsController extends Controller
      */
     public function store(Post $post)
     {
-        //Validate the comment
+        // Validate the comment
         $this->validate(request(), [
             'body' => 'required|min:2'
         ]);
 
         $post->addComment(request('body'));
-    
         return back();
     }
 
@@ -59,7 +58,7 @@ class CommentsController extends Controller
     
     public function show($id)
     {
-        
+        //
     }
 
     /**

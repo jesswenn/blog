@@ -9,7 +9,7 @@
 | contains the "web" middleware group. Now create something great–|
 */
 
-//Dynamic values
+// Dynamic values
 // Route::get('/users/{id}/{name}', function($id, $name){
 // 	return 'This is user' .$id. 'with an id of' .$id;
 // 	// return view ('pages.about');
@@ -24,7 +24,7 @@ Route::get('/contact', 'PagesController@contact');
 
 // Route::get('/email', 'PagesController@email')->name('sendEmail');
 
-//Mail route
+// Mail controller
 Route::get('send', 'MailController@send');
 // Route::get('email', 'MailController@email');
 
@@ -35,38 +35,48 @@ Route::resource('posts', 'PostsController');
 
 Auth::routes();
 
-//Dashboard controller
+// Dashboard controller
 Route::get('/dashboard', 'DashboardController@index')->name('manage.dashboard');
 
 //User controller avatar image
 Route::get('/profile', 'UserController@profile');
 Route::post('/profile', 'UserController@update_avatar');
 
-//Comments
+// Comments controller
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 
+//Clear Cache facade value:
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    return '<h1>Cache facade value cleared</h1>';
+});
 
+//Reoptimized class loader:
+Route::get('/optimize', function() {
+    $exitCode = Artisan::call('optimize');
+    return '<h1>Reoptimized class loader</h1>';
+});
 
+//Route cache:
+Route::get('/route-cache', function() {
+    $exitCode = Artisan::call('route:cache');
+    return '<h1>Routes cached</h1>';
+});
 
-// Route::get('foo', function() {
-//     $image = Image::make('http://placehold.it/500x500/000/e8117f');
-//     return Response::make($image->encode('jpg'), 200, ['Content-Type' => 'image/jpeg']);
-// });
+//Clear Route cache:
+Route::get('/route-clear', function() {
+    $exitCode = Artisan::call('route:clear');
+    return '<h1>Route cache cleared</h1>';
+});
 
+//Clear View cache:
+Route::get('/view-clear', function() {
+    $exitCode = Artisan::call('view:clear');
+    return '<h1>View cache cleared</h1>';
+});
 
-
-//=========================================================
-			
-			// TO DO! MAke the comments work
-			// Cmments Controller
-
-//=========================================================
-//Comments controller
-// Route::post('/posts/{post}/comments', 'CommentsController@store');
-// Route::post('comments/{post_id', ['uses' => 'CommentsController@store', 'as' => 'comments.store']);
-
-// Route::post('comments/{post}',  [
-//     'as' => 'comments.store',
-//     'uses' => 'CommentsController@store'
-// ]);
-
+//Clear Config cache:
+Route::get('/config-cache', function() {
+    $exitCode = Artisan::call('config:cache');
+    return '<h1>Clear Config cleared</h1>';
+});
