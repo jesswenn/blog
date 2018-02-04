@@ -2,11 +2,12 @@
     Here we create our POSTS, In our DASHBOARD 
     Here we edit, delete and upload images to the DB 
 ========================================================--}} 
-@extends('layouts.app') 
-@section('content') 
+@extends('layouts.app')
+@section('content')
 
 <div class="container">
-<div class="row">
+   <div class="row">
+
    <a href="/posts" class="btn btn-default m-l-30">Hem</a> 
    <h1 class="m-l-30">Skapa ett inlägg</h1>
 
@@ -29,4 +30,11 @@
    {!! Form::close() !!} 
 </div>
 {{-- END row --}}
+
+
+        
+         </div>
+      </div>
+   </div>
+</div>
 @endsection

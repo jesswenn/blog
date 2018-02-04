@@ -1,8 +1,7 @@
-{{-- ================================================ 
-    THE AUTH METHOD THATS INCLUDED WHEN MAKING 
+{{-- THE AUTH METHOD THATS INCLUDED WHEN MAKING 
     php artisan make:auth Obs! it will 
-    replace your app.blade.php 
-===================================================== --}}
+    replace your app.blade.php  --}}
+
 <div class="nav-container">
         <div class="container">
             <!-- Navbar -->
@@ -25,56 +24,7 @@
                         <li>m</li>
                     </div>
                 </div>
-                {{-- TO DO...
-                MAke the logo work in SCSS file???? --}}
-                <style>
-                    .center {
-                    position: absolute;
-                    top: 30%;
-                    left: 80%;
-                    transform: translate(-50%, -50%);
-                    }
-                    .logo{
-                    margin: 0;
-                    padding: 0;
-                    display: flex;
-                    }
-                    .logo li {
-                    list-style: none;
-                    color: #19d8a7;
-                    font-size: 3em;
-                    font-weight: lighter;
-                    letter-spacing: 12px;
-                    }
-                    .logo:hover li {
-                    cursor: pointer;
-                    animation: animate 2s linear both;
-                    }
-                    @keyframes animate {
-                    0% {
-                    transform: rotate(0deg) translateY(0px);
-                    opacity: 1;
-                    filter: blur(1px);
-                    }
-                    100% {
-                    transform: rotate(45deg) translateY(-200px);
-                    opacity :0;
-                    filter: blur(20px);
-                    }
-                    }
-                    .logo li:nth-child(1) {
-                    animation-delay: 0s;
-                    }
-                    .logo li:nth-child(2) {
-                    animation-delay: .4s;
-                    }
-                    .logo li:nth-child(3) {
-                    animation-delay: .8s;
-                    }
-                    .logo li:nth-child(4) {
-                    animation-delay: 1.2s;
-                    }
-                </style>
+                
                 <!-- Right Side Of Navbar Login and Register links-->
                 <ul class="nav navbar-nav navbar-right m-t-10 m-b-40">
                     <!-- Authentication Links -->
@@ -85,7 +35,7 @@
                 </ul>
                 {{-- Dropdown menu when logged in to Dashboard / And logout --}}
                 <li class="dropdown navbar-right">
-                    <a href="#" class="dropdown-toggle nav-wrapper-auth" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" style="position: relative;padding-left: 50px;">
+                    <a href="#" class="dropdown-toggle nav-wrapper-auth" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px;">
                     {{-- Avatar image in dropdown menu
                     (abow) style="position: relative;padding-left: 50px; --}}
                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -116,22 +66,19 @@
                             </span>Logout</a>
                             <hr>
                             {{-- Redirects to Manage dashboard --}}
-                            <a href="{{route('manage.dashboard')}}">
+                      {{--       <a href="{{route('manage.dashboard')}}">
                             <span class="icon">
                             <i class="fa fa-fw m-r-10 fa-table"></i>
                             </span>CMS</a>
-                        </li>
+                        </li> --}}
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>
                         </li>
                     </ul>
                 </li>
-                @endif
-                {{-- @endguest --}} 
+                @endif{{-- END @endif --}} 
                 </ul>
             </div>
-        </div>
-        {{-- END row --}} 
-    </div>
-    {{-- END nav-container --}}
+        </div>{{-- END row --}} 
+    </div>{{-- END nav-container --}} 

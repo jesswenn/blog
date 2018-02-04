@@ -61,7 +61,7 @@ class UserController extends Controller
            return redirect()->route('users.show', $user->id);
        }else{
         
-        Session::flash('danger', 'Sorrry a problem has occured whille creating a new user');
+        Session::flash('danger', 'Sorrry a problem has occured while creating a new user');
         return redirect()->route('users.create');
        }
     }

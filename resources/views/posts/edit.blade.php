@@ -34,11 +34,14 @@
 {{-- =====================================================
 		Upload image 
 ========================================================--}}
-	<div class="form-group-choose-file">
-		{{Form::file('cover_image')}}
-	</div>
+			<div class="form-group-choose-file">
+				{{Form::file('cover_image')}}
+			</div>
 
-	{{Form::hidden('_method', 'PUT')}}
-	<div class="m-t-30"> {{Form::submit('Skicka', ['class' => 'btn btn-primary'])}} </div>
-	{!! Form::close() !!}
+			{{Form::hidden('_method', 'PUT')}}
+			<div class="m-t-30"> {{Form::submit('Skicka', ['class' => 'btn btn-primary'])}} </div>
+				{!! Form::close() !!}
+			</div>
+		</div>
+	</div>
 @endsection

@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class newMail extends Mailable
+class NewUserWelcome extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -23,15 +23,14 @@ class newMail extends Mailable
 
     /**
      * Build the message.
+     * Render to the viewfile
+     * markdown=use the Laravel builtin markdown instead 
+      of plain HTML othervise we use (view)
      *
      * @return $this
      */
     public function build()
     {
-        //Location to the view files
-        // Write view instead of markdown 
-        // it will render your HTML instead of Laravel built in markdown
-
-        return $this->markdown('email')->to('jessica.wennberg@medieinstitutet.se');
+        return $this->markdown('emails.user.newuserwelcome');
     }
 }

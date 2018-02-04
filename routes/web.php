@@ -25,8 +25,8 @@ Route::get('/contact', 'PagesController@contact');
 // Route::get('/email', 'PagesController@email')->name('sendEmail');
 
 // Mail controller
-Route::get('send', 'MailController@send');
-// Route::get('email', 'MailController@email');
+// Route::get('send', 'MailController@send');
+Route::get('email', 'DashboardController@email')->name('sendEmail');
 
 
 // Create all routes for all functions we need

@@ -13,6 +13,7 @@
             <div class="panel-body">
                {{-- <a href="{{ route('sendEmail') }}" class="btn btn-primary">Send email</a> --}}
                <a href="/posts/create" class="btn btn-primary btn2">Skapa ett inlägg</a>
+               <a href="{{route('sendEmail')}}" class="btn btn-primary">Send me a email</a>
                <h3>Välkommen!</h3>
                
 {{-- ==========================================================

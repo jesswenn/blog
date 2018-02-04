@@ -19,7 +19,7 @@
             <div class="col-sm-8 blog-main">
 
                 <!-- Text input-->
-                <div class="form-group">
+       {{--          <div class="form-group">
                     <label class="col-md-4 control-label"></label>  
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
@@ -27,10 +27,10 @@
                             <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- Text input-->
-                <div class="form-group">
+     {{--            <div class="form-group">
                     <label class="col-md-4 control-label" ></label> 
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
@@ -38,10 +38,10 @@
                             <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
                 <!-- Text input-->
-                <div class="form-group">
+  {{--               <div class="form-group">
                     <label class="col-md-4 control-label"></label>  
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
@@ -49,9 +49,9 @@
                             <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-                <div class="form-group">
+    {{--             <div class="form-group">
                     <label class="col-md-4 control-label"></label>
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
@@ -59,12 +59,14 @@
                             <textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
                         </div>
                     </div>
-                </div>
+                </div> --}}
+
+          
 
                 <!-- Button -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label"></label>
-                    <div class="col-md-4">
+                    <label class="control-label"></label>
+                    <div class="">
                         <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
                     </div>
                 </div>

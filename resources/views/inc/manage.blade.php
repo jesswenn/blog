@@ -4,7 +4,6 @@
   SIDEBAR in Manage 
 
 ==========================================================--}}
-
 <div id="wrapper">
    <!-- Sidebar -->
    <div id="sidebar-wrapper ">

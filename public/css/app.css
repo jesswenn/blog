@@ -9659,6 +9659,91 @@ SHOW ALL POST PAGE – images
   width: 100%;
 }
 
+/* 
+#my album 
+LOGO animation
+-------------------------------------------------- */
+
+.center {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo li {
+  list-style: none;
+  color: #19d8a7;
+  font-size: 3em;
+  font-weight: lighter;
+  letter-spacing: 12px;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(0px);
+            transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+
+  100% {
+    -webkit-transform: rotate(45deg) translateY(-200px);
+            transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(0px);
+            transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+
+  100% {
+    -webkit-transform: rotate(45deg) translateY(-200px);
+            transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+  }
+}
+
+.logo li:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.logo li:nth-child(2) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.logo li:nth-child(3) {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+.logo li:nth-child(4) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
 /* About page */
 
 /* 
@@ -9740,10 +9825,6 @@ profile image big and small
 
 .fileUpload input.upload {
   position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
   font-size: 20px;
   cursor: pointer;
   opacity: 0;
@@ -9766,9 +9847,6 @@ profile image big and small
   right: 5px;
   border-radius: 50%;
 }
-
-/* PROFILE PAGE FORM – try align btn align??????
--------------------------------------------------- */
 
 /* Home page */
 
@@ -9885,24 +9963,6 @@ LOGO
   cursor: pointer;
   -webkit-animation: animate 2s linear both;
           animation: animate 2s linear both;
-}
-
-@-webkit-keyframes animate {
-  0% {
-    -webkit-transform: rotate(0deg) translateY(0px);
-            transform: rotate(0deg) translateY(0px);
-    opacity: 1;
-    -webkit-filter: blur(1px);
-            filter: blur(1px);
-  }
-
-  100% {
-    -webkit-transform: rotate(45deg) translateY(-200px);
-            transform: rotate(45deg) translateY(-200px);
-    opacity: 0;
-    -webkit-filter: blur(20px);
-            filter: blur(20px);
-  }
 }
 
 @keyframes animate {

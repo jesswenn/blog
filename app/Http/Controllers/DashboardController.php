@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 
+use Mail;
+use App\Mail\NewUserWelcome;
+use Auth;
+
 class DashboardController extends Controller
 {
     /**
@@ -35,6 +39,18 @@ class DashboardController extends Controller
         $user = User::find($user_id);
 
         return view('dashboard')->with('posts', $user->posts);
+
+    }
+
+    // Here we send the users info and then it to send 
+    // it will render the the mail controler file NewUserWelcome 
+    // run the build function n controller
+    // then it runs the blade file newuserwelcome.blade.php, to render it to the view
+       public function email()
+    {
+
+        Mail::to(Auth::user()->email)->send(new NewUserWelcome());
+        return redirect('/dashboard');
 
     }
 }

@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
 
-        {{-- Bootstrap CDB --}}
+        {{-- Bootstrap CDN --}}
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
         <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -23,17 +23,21 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
+
+        <!-- Here we include the seperate blade files -->
         <div class="container">
             <div class="row">
+
                 @include('layouts.navbar')
+
                 <div class="container">
                     @include('inc.messages')
                 </div>
+                
                 @yield('content')
-            </div>
-            {{-- END row --}} 
-        </div>
-        {{-- END container--}}                          
+
+            </div>{{-- END row --}} 
+        </div>{{-- END container--}}                          
         @include('layouts.footer')
 
         <!-- Scripts -->
