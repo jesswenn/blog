@@ -8,7 +8,7 @@
    {{-- <div class="row m-l-30"> --}}
       <a href="/posts" class="btn btn-default">Hem</a> 
       <h1>{{$post->title}}</h1>
-      <small class="author-written">Written on{{ $post->created_at->toFormattedDateString() }} by {{$post->user->name}}</small> 
+      <small class="author-written">Written on {{ $post->created_at->toFormattedDateString() }} by {{$post->user->name}}</small> 
       {{-- <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}" alt="Image"> --}}
       <?php $singleimgLink = '/storage/cover_images/' . $post->cover_image; ?>
       {{-- <img src="{{ asset ('cover_images/' . $post->cover_image ) }}" width='800' height="400"> --}}
@@ -62,7 +62,7 @@
                   </div>
                   {{-- End form-group --}}
                </form>
-               @include('inc.messages');
+               @include('inc.messages')
             </div>
             {{-- End card-block --}}
          </div>
@@ -76,14 +76,3 @@
 @endif 
 
 @endsection
-
-{{-- ========================================================================= 
-Here if we want to delet a post on the single post show btn here
-If not only delete a post on the DASHBOARD  
-=============================================================================== --}} 
-{{-- @include('inc.messages') --}}                   
-{{-- In the PostController@destroy method we pass the post and the id so it knows with post to delete --}} 
-{{-- {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method'=> 'POST', 'class' => 'pull-right'])!!} 
-{{Form::hidden('_method', 'DELETE')}} 
-{{Form::submit('Delete', ['class' => 'btn btn-danger btn'])}} 
-{!!Form::close()!!}  --}}

@@ -7,7 +7,7 @@
 
 <div class="container ">
     <div class="row">
-    	<a href="/posts" class="btn btn-default">Tillbaka</a>
+    	<a href="/posts" class="btn btn-default">Hem</a>
 	<h1><h1>
 		
 {{-- =====================================================
@@ -39,7 +39,7 @@
 			</div>
 
 			{{Form::hidden('_method', 'PUT')}}
-			<div class="m-t-30"> {{Form::submit('Skicka', ['class' => 'btn btn-primary'])}} </div>
+			<div class="#"> {{Form::submit('Skicka', ['class' => 'btn btn-primary'])}} </div>
 				{!! Form::close() !!}
 			</div>
 		</div>
