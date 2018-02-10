@@ -53,18 +53,21 @@
                             <i class="fa fa-fw m-r-10 fa-pencil-square-o"></i>
                             </span>All posts</a>
                         </li>
-                        <li><a href="/profile">
+
+                    {{-- PROFILE PAGE UNDER CONSTRUVTION :) --}}
+                    {{--     <li><a href="/profile">
                             <span class="icon">
                             <i class="fa fa-fw m-r-10 fa-user"></i>
                             </span>Profile</a>
-                        </li>
+                        </li> --}}
+
                         <li>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                             <span class="icon">
                             <i class="fa fa-fw m-r-10 fa-sign-out"></i>
                             </span>Logout</a>
-                            <hr>
+                       
                             {{-- Redirects to Manage dashboard --}}
                       {{--       <a href="{{route('manage.dashboard')}}">
                             <span class="icon">

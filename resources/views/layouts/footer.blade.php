@@ -2,7 +2,7 @@
 	Footer
 ========================================================--}}
 <footer>
-		<div class="footer-container">
+		<div class="footer-container m-t-20">
 			{{-- 
 			<div class="row">
 				--}}

@@ -67,7 +67,7 @@
                 <div class="form-group">
                     <label class="control-label"></label>
                     <div class="">
-                        <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+                        {{-- <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button> --}}
                     </div>
                 </div>
     </fieldset>

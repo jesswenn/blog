@@ -30,7 +30,7 @@
                   @foreach($posts as $post)
                   <tr>
                      <td>{{$post->title}}</td>
-                     <td><a href="/posts/{{$post->id}}/edit" class="btn btn-default p-r-20">Redigera</a></td>
+                     <td><a href="/posts/{{$post->id}}/edit" class="btn btn-default">Redigera</a></td>
                      <td>
                         {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method'=> 'POST', 'class' => 'pull-right'])!!}
                         {{ Form::hidden('_method', 'DELETE')}}
@@ -41,7 +41,7 @@
                   @endforeach
                </table>
                @else
-               <p>Du har inga poster!</p>
+               <p class="#">Du har inga poster!</p>
                @endif
             </div>
          </div>

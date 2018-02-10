@@ -1,5 +1,5 @@
 /* 
-Images and CSS grid
+FRONT PAGE HOME – Images and CSS grid
 -------------------------------------------------- */
 .front-image{
    // @include imgRetina(front-image, png, 100px, 40px);
@@ -10,7 +10,6 @@ Images and CSS grid
     padding-left: 0 auto;
     padding-right: 0 auto;
     margin: 0;
-    /*border: 4px solid red;*/
 
     /* Center and scale the image */
     background-position: center center;
@@ -93,7 +92,6 @@ Images and CSS grid
   
   &:hover {
     transform: scale(1.05);
-    
     &:after {
       opacity: 0;
     }
@@ -119,15 +117,12 @@ Images and CSS grid
   &__details {
     position: relative;
     z-index: 1;
-    padding: 15px;
     color: #444;
     background: #fff;
-    // text-transform: lowercase;
     letter-spacing: 1px;
     color: #828282;
     
     &:before {
-    // content: counter(item-counter);
       font-size: 1.1rem;
       padding-right: 0.5em;
       color: #444;

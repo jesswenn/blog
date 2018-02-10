@@ -10012,7 +10012,7 @@ LOGO
 /* Image grid*/
 
 /* 
-Images and CSS grid
+FRONT PAGE HOME – Images and CSS grid
 -------------------------------------------------- */
 
 .front-image {
@@ -10023,7 +10023,6 @@ Images and CSS grid
   padding-left: 0 auto;
   padding-right: 0 auto;
   margin: 0;
-  /*border: 4px solid red;*/
   /* Center and scale the image */
   background-position: center center;
   background-repeat: no-repeat;
@@ -10152,7 +10151,6 @@ Images and CSS grid
 .item__details {
   position: relative;
   z-index: 1;
-  padding: 15px;
   color: #444;
   background: #fff;
   letter-spacing: 1px;
@@ -10368,6 +10366,11 @@ Button
     padding-right: 0px;
     padding-left: 10px;
     width: 100%;
+  }
+
+  .btn btn-danger {
+    width: 100%;
+    padding: 30px;
   }
 }
 
