@@ -1,6 +1,5 @@
 # Laravel – Examination project
-* Final project in the Laravel framework.
-A separate CMS instagram blog with my private photos.
+* Final project in the Laravel framework. CMS instagram blog with my private photos.
 
 ## Dependencies
 * php 7+
