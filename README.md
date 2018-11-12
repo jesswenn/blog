@@ -1,4 +1,7 @@
 # Laravel – Examination project
+* This is my exam's project.
+* The project is built as a mini Instagram of my own private images. 
+* The project is built in the Laravel framework.
 
 ## Dependencies
 
