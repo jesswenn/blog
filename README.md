@@ -15,3 +15,12 @@
 * Generate app key: `php artisan key:generate`
 * Inside you VM, generate database content: `php artisan migrate:refresh --seed`
 * Create symlink to storage inside your VM: `php artisan storage:link`
+
+
+
+Some basic Git commands are:
+```
+git status
+git add
+git commit
+```
